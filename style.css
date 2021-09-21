@@ -1,0 +1,147 @@
+*{
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #323031;
+    width: 100vw;
+    max-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 5px #7B889E;
+}
+
+header a{
+    color: #7F00FF;
+}
+
+header .Topo{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+
+}
+
+header .logoTopo{
+    display: flex;
+
+}
+
+header img{
+    height: 90px;
+}
+
+
+header .TopoDireita{
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    align-content:space-between;
+    align-items: center;
+    color: #7F00FF;
+}
+
+
+header .Direita{
+    font-weight: normal;
+    margin-right: 5px;
+    font-size: smaller;
+
+}
+
+#Cadastre{
+    margin-right: 15px;
+    padding: 15px;
+    background-color: #7F00FF;
+    color: #323031;
+    font-size: 15px;
+
+}
+
+header .LinksPrincipais{
+    font-weight: bolder;
+    color: #7F00FF;
+    margin-right: 15px;
+}
+
+
+header .Barra{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    
+} 
+
+header .leftBar{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    margin-left: 23px;
+    margin-bottom: 10px;
+}
+
+header .rightBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.iconeLupa{
+    height: 15px;
+    margin-right: 5px;
+    color: #7F00FF;
+}
+
+#formBusca{
+    border: 1px solid #7B889E;
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    padding: 2px 2px 2px 2px;
+    outline: 0;
+    background-color: #f5f5f5;
+}
+
+
+body{
+    background-color: #F6D7CB;
+}
+
+body .Container{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+footer{
+    background-color: #323031;
+}
+footer .institucionais{
+    height: 5vh;
+    background-color: #323031;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    
+}
+
+footer .rodape{
+    color: #7B889E;
+    margin-right: 23px;
+    margin-left: 23px;
+    
+}
+
+footer a{
+    color: #7F00FF;
+    font-weight: bolder;
+}

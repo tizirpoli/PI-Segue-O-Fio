@@ -1,0 +1,46 @@
+@media screen and (max-width: 773px) {
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 5px;
+        max-height: 50vh;
+    }
+
+    header .Topo{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin-bottom: 15px;
+        
+    }
+
+    header .TopoDireita{
+        flex-direction: column-reverse;
+    }
+    
+    header .Direita{
+        margin-bottom: 15px;
+    }
+      
+    header .Barra{
+        display: flex;
+        flex-direction: column;
+        
+    } 
+    
+    header .leftBar{
+        display: flex;
+        margin-bottom: 15px;
+        
+    }
+    
+    header .rightBar{
+        display: flex;
+    }
+    
+    
+    
+   
+}
