@@ -8,11 +8,12 @@
 
 header{
     background-color: #323031;
-    width: 100vw;
+    width: 100%;
     max-height: 20vh;
     display: flex;
     flex-direction: column;
     border-bottom: solid 5px #7B889E;
+    justify-content: center;
 }
 
 header a{
@@ -23,12 +24,7 @@ header .Topo{
     display: flex;
     flex-direction: row;
     align-items:center;
-    justify-content: space-between;
-
-}
-
-header .logoTopo{
-    display: flex;
+    justify-content:space-between; /*center*/
 
 }
 
@@ -38,12 +34,12 @@ header img{
 
 
 header .TopoDireita{
-    font-weight: normal;
     display: flex;
     flex-direction: row;
-    align-content:space-between;
+    font-weight: normal;
     align-items: center;
     color: #7F00FF;
+    
 }
 
 
@@ -51,7 +47,6 @@ header .Direita{
     font-weight: normal;
     margin-right: 5px;
     font-size: smaller;
-
 }
 
 #Cadastre{
@@ -122,23 +117,109 @@ body .Container{
     align-content: space-between;
 }
 
+body .Main{
+    width: 800px;
+    height: 300px;
+    border: 3px solid;
+    background-color: #7B889E;
+    align-self: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+body .Mid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+h3{
+    margin-bottom: 10px;
+    color: #F53100;   
+}
+
+body .blobMid1{
+    background-color: #7b889ec0;
+    border: 1px #323031 solid;
+    padding: 20px 90px;
+    text-align: left;
+}
+
+body .blobMid2{
+    background-color: #7b889ec0;
+    border: 1px #323031 solid;
+    padding: 20px 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#iconeredmid{
+    height: 80px;
+}
+
+.mailMid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#envelope{
+    color: #F53100;
+    size: 50px;
+    margin-left: 15px;
+    
+}
+
+body .blobMid3{
+    background-color: #7b889ec0;
+    border: 1px #323031 solid;
+    padding: 20px 90px;
+}
+
+body .Bottom{
+    background-color: #7b889ec0;
+    border: 1px #323031 solid;
+    padding: 20px 90px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+h4{
+    color:#323031;
+    size: 50px;
+    margin-right: 15px; 
+}
+
+#envelopeindique{
+    color:#323031;
+    size: 50px;
+    margin-left: 15px;
+    
+}
+
 footer{
     background-color: #323031;
+    width: 100%;
 }
+
 footer .institucionais{
     height: 5vh;
     background-color: #323031;
     display: flex;
     align-items: center;
-    align-content: center;
-    
 }
 
 footer .rodape{
-    color: #7B889E;
-    margin-right: 23px;
-    margin-left: 23px;
     
+    margin-left: 23px;
 }
 
 footer a{
