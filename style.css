@@ -21,15 +21,22 @@ header a{
 }
 
 header .Topo{
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items:center;
-    justify-content:space-between; /*center*/
+    justify-content: space-between; 
 
 }
 
 header img{
-    height: 90px;
+    height: 50px;
+    
+}
+
+.blank{
+    height: 47px;
+    width: 207px;
 }
 
 
@@ -93,11 +100,11 @@ header .rightBar{
 .iconeLupa{
     height: 15px;
     margin-right: 5px;
-    color: #DD962C;
+    color: #F6AE2D;
 }
 
 #formBusca{
-    border: 1px solid #4E586A;
+    border: 2px solid #4E586A;
     border-radius: 5px;
     height: 25px;
     width: 100%;
@@ -120,11 +127,14 @@ body .Container{
 body .Main{
     width: 800px;
     height: 300px;
-    border: 3px solid;
-    background-color: #4e586a;
+
     align-self: center;
     text-align: center;
     margin-top: 30px;
+}
+
+.Main img{
+    height: 300px;
 }
 
 body .Mid{
@@ -141,19 +151,26 @@ h3{
 }
 
 body .blobMid1{
-    background-color: #4E586A;
-    border: 1px #323031 solid;
+    
+    border: 1px #4e586a  solid;
     padding: 20px 90px;
     text-align: left;
+
+    -webkit-box-shadow: 0px 0px 30px 0px #4e586aa6;
+    -moz-box-shadow:    0px 0px 30px 0px #4e586aa6;
+    box-shadow:         0px 0px 30px 0px #4e586aa6;
 }
 
 body .blobMid2{
-    background-color: #4E586A;
-    border: 1px #323031 solid;
+    border: 1px #4e586a  solid;
     padding: 20px 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    -webkit-box-shadow: 0px 0px 30px 0px #4e586aa6;
+    -moz-box-shadow:    0px 0px 30px 0px #4e586aa6;
+    box-shadow:         0px 0px 30px 0px #4e586aa6;
 }
 
 #iconeredmid{
@@ -166,6 +183,16 @@ body .blobMid2{
     align-items: center;
 }
 
+.formSignUp{
+    border: 2px solid #4E586A;
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    outline: 0;
+    background-color: #f5f5f5;
+    align-items: center;
+}
+
 #envelope{
     color: #DD962C;
     size: 50px;
@@ -174,22 +201,23 @@ body .blobMid2{
 }
 
 body .blobMid3{
-    background-color: #4E586A;
-    border: 1px #323031 solid;
+    border: 1px #4e586a solid;
     padding: 20px 90px;
+
+    -webkit-box-shadow: 0px 0px 30px 0px #4e586aa6;
+    -moz-box-shadow:    0px 0px 30px 0px #4e586aa6;
+    box-shadow:         0px 0px 30px 0px #4e586aa6;
 }
 
 body .Bottom{
-    background-color: #4E586A;
+    background-image: url("/img/knittingPattern.png");
     border: 1px #323031 solid;
     padding: 20px 90px;
     display: flex;
     flex-direction: row;
     align-items:center;
     justify-content: center;
-    margin-top: 50px;
-    margin-right: 60px;
-    margin-left: 60px;
+    margin: 60px;
 }
 
 h4{
@@ -237,7 +265,7 @@ footer a{
 }
 
 footer .redes{
-    color:#dd962c;
+    color:#F6AE2D;
     align-content: center;
     margin-right: 20px;
 }

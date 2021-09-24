@@ -1,4 +1,4 @@
-@media screen and (max-width: 773px) {
+@media screen and (max-width: 779px) {
     
     header{
         display: flex;
@@ -14,6 +14,10 @@
         align-items:center;
         margin-bottom: 15px;
         
+    }
+
+    header img{
+        margin-bottom: 30px;
     }
 
     header .TopoDireita{
@@ -40,7 +44,35 @@
         display: flex;
     }
     
-    
+    .Main img{
+        width: 100vw;
+        height: auto;
+        margin-top: 5px;
+        padding: 0px;
+        
+    }
+
+    body .Mid{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    body .blobMid1{
+        margin-bottom: 15px;
+    }
+
+    body .blobMid2{
+        margin-bottom: 15px;
+    }
+
+    body .blobMid3{
+        margin-bottom: 15px;
+    }
+
+    h4{
+        text-align: center;
+    }
     
    
 }
