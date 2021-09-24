@@ -126,7 +126,7 @@ body .Container{
 
 body .Main{
     width: 800px;
-    height: 300px;
+    height: auto;
 
     align-self: center;
     text-align: center;

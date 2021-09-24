@@ -1,4 +1,4 @@
-@media screen and (max-width: 779px) {
+@media screen and (max-width: 930px) {
     
     header{
         display: flex;
@@ -47,7 +47,6 @@
     .Main img{
         width: 100vw;
         height: auto;
-        margin-top: 5px;
         padding: 0px;
         
     }
