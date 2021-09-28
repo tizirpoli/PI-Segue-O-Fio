@@ -1,0 +1,160 @@
+*{
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+body .Container{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+body .Main{
+    width: 800px;
+    height: auto;
+
+    align-self: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.Main img{
+    height: 300px;
+}
+
+body .Mid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+h3{
+    margin-bottom: 10px;
+    color: #dd962c;   
+}
+
+body .blobMid1{
+    
+    border: 1px #4e586a  solid;
+    padding: 20px 90px;
+    text-align: left;
+
+    -webkit-box-shadow: 0px 0px 30px 0px #4e586aa6;
+    -moz-box-shadow:    0px 0px 30px 0px #4e586aa6;
+    box-shadow:         0px 0px 30px 0px #4e586aa6;
+}
+
+body .blobMid2{
+    border: 1px #4e586a  solid;
+    padding: 20px 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    -webkit-box-shadow: 0px 0px 30px 0px #4e586aa6;
+    -moz-box-shadow:    0px 0px 30px 0px #4e586aa6;
+    box-shadow:         0px 0px 30px 0px #4e586aa6;
+}
+
+#iconeredmid{
+    height: 80px;
+}
+
+.mailMid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.formSignUp{
+    border: 2px solid #4E586A;
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    outline: 0;
+    background-color: #f5f5f5;
+    align-items: center;
+}
+
+#envelope{
+    color: #DD962C;
+    size: 50px;
+    margin-left: 15px;
+    
+}
+
+body .blobMid3{
+    border: 1px #4e586a solid;
+    padding: 20px 90px;
+
+    -webkit-box-shadow: 0px 0px 30px 0px #4e586aa6;
+    -moz-box-shadow:    0px 0px 30px 0px #4e586aa6;
+    box-shadow:         0px 0px 30px 0px #4e586aa6;
+}
+
+body .Bottom{
+    background-image: url("/img/knittingPattern.png");
+    border: 1px #323031 solid;
+    padding: 20px 90px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    margin: 60px;
+}
+
+h4{
+    color:#0A0A0A;
+    size: 50px;
+    margin-right: 15px; 
+}
+
+#envelopeindique{
+    color: #0a0a0a;
+    size: 50px;
+    margin-left: 15px;
+    
+}
+
+@media screen and (max-width: 930px) {
+    
+    .Main img{
+        width: 90vw;
+        height: auto;
+        padding: 0px;
+        
+    }
+
+    body .Mid{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    body .blobMid1{
+        margin-bottom: 15px;
+    }
+
+    body .blobMid2{
+        margin-bottom: 15px;
+    }
+
+    body .blobMid3{
+        margin-bottom: 15px;
+    }
+
+    h4{
+        text-align: center;
+    }
+    
+   
+}
