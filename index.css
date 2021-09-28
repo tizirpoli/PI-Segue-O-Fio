@@ -146,6 +146,7 @@ h4{
 
     body .blobMid2{
         margin-bottom: 15px;
+        padding: 20px 30px;
     }
 
     body .blobMid3{
@@ -154,6 +155,16 @@ h4{
 
     h4{
         text-align: center;
+    }
+
+    body .Bottom{
+        padding: 20px 120px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items:center;
+        justify-content: center;
+        margin: 30px;
+        
     }
     
    
