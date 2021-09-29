@@ -64,10 +64,12 @@ body .searchMain{
     width: 70px;
     margin-left: 10px;
     font-size: 16px;
+    border: solid 1px #DD962C;
 }
 
 .searchBttn:hover{
     color: #DD962C;
+    border: solid 2px #0a0a0a;
 }
 
 .searchBttn:active{
