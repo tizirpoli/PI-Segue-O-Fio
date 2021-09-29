@@ -102,7 +102,7 @@ body .blobMid3{
 }
 
 body .Bottom{
-    background-image: url("/img/knittingPattern.png");
+    background-image: url("./img/knittingPattern.png");
     border: 1px #323031 solid;
     padding: 20px 90px;
     display: flex;
