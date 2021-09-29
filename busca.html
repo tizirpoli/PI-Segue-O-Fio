@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="./busca.css">
+    <link rel="stylesheet" type="text/css" href="./headerAndFooter.css">
+    <title>Busca | Segue o Fio</title>
+</head>
+
+<body>
+    <header>
+        <div class="Topo">
+            <div class="blank"></div>
+            <div class="logoTopo">
+                <img id="logo" src="./img/primarylogo_border.PNG.png" alt="Logo Principal">
+            </div>
+            <div class="TopoDireita">
+                <div class="Direita"><a href="/">Fazer Login</a></div>
+                <div class="Direita"></div><button id="Cadastre">Cadastre-se</button>
+            </div>
+        </div>
+        </div>
+
+        <div class="Barra">
+            <div class="leftBar">
+                <div class="LinksPrincipais"><a href="./index.html">Home</a></div>
+                <div class="LinksPrincipais"><a href="/">Ranking</a></div>
+                <div class="LinksPrincipais dropdown">
+                    <button class="dropbtn"><a href="./categories.html">Categorias</a></button>
+                    <div class="dropdown-content">
+                        <a href="/">Aprendizagem</a><br>
+                        <a href="/">Atualidades</a><br>
+                        <a href="/">Curadoria</a><br>
+                        <a href="/">Entretenimento</a><br>
+                        <a href="/">Ver todas</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightBar">
+                <div class="iconeLupa"><i class="fas fa-search fa-lg"></i></div>
+                <div>
+                    <form action="" id="formBusca">
+                        <input class="Busca-texto" type="text">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="Container">
+        <div class="searchMain">
+            <div class="searchImg">
+                <img src="./img/search.png" alt="search logo">
+            </div>
+            <div class="searchTool">
+                <form action="" id="searchInputBox">
+                    <input class="textSearch" type="text">
+                </form>
+                <button class="searchBttn">Buscar</button>
+            </div>
+            <div class="searchGuide">
+                <p>Busque por categoria, título, autor ou conteúdo do fio.</p>
+            </div>
+        </div>
+
+        <div class="resultsBar">
+            <p class="results">Resultados:</p>
+            <form>
+                <select id="filter" name="filtro">
+                    <option value="au">Data postagem</option>
+                    <option value="ca">Mais curtidos</option>
+                    <option value="usa">Mais compartilhados</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="resultsItems">
+            <div class="lineResult">
+                <div class="profileData">
+                    <div class="profileImgA"></div>
+                    <div class="threadResult">
+                        <p class="username">@Username</p>
+                        <p class="descriptionRes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolore
+                            inventore distinctio, impedit voluptate.</p>
+                    </div>
+                </div>
+                <div class="resultFunc">
+                    <div class="divBttn">
+                        <button class="copyLink">Copy Link <i class="far fa-clone"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="resultsItems">
+            <div class="lineResult">
+                <div class="profileData">
+                    <div class="profileImgB"></div>
+                    <div class="threadResult">
+                        <p class="username">@Username</p>
+                        <p class="descriptionRes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolore
+                            inventore distinctio, impedit voluptate.</p>
+                    </div>
+                </div>
+                <div class="resultFunc">
+                    <div class="divBttn">
+                        <button class="copyLink">Copy Link <i class="far fa-clone"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="resultsItems">
+            <div class="lineResult">
+                <div class="profileData">
+                    <div class="profileImgC"></div>
+                    <div class="threadResult">
+                        <p class="username">@Username</p>
+                        <p class="descriptionRes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolore
+                            inventore distinctio, impedit voluptate.</p>
+                    </div>
+                </div>
+                <div class="resultFunc">
+                    <div class="divBttn">
+                        <button class="copyLink">Copy Link <i class="far fa-clone"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="pageResults">
+            <i class="fas fa-step-backward"></i>
+            <i class="fas fa-chevron-left"></i>
+            <p>Página 1 de 3</p>
+            <i class="fas fa-chevron-right"></i>
+            <i class="fas fa-step-forward"></i>
+
+        </nav>
+    </div>
+
+    <footer>
+        <div class="institucionais">
+            <div class="rodape"><a href="/">Sobre Nós</a></div>
+            <div class="rodape"><a href="/">Contato</a></div>
+            <div class="rodape"><a href="/">Créditos</a></div>
+        </div>
+        <div class="redes">
+            <i class="fab fa-twitter-square fa-lg"></i>
+            <i class="fab fa-facebook-square fa-lg"></i>
+            <i class="fab fa-instagram-square fa-lg"></i>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/f396ab4954.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
