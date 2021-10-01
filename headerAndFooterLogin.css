@@ -52,8 +52,8 @@ header .TopoDireita{
     margin-right: 20px;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: flex-end;
+    
 }
 
 .profileMenu{
@@ -64,24 +64,17 @@ header .TopoDireita{
 }
 
 #profileMenuPic{
-    width: 50px;
-    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100px;
+    height: 70px;
     background-color: #0A0A0A;
     border: solid #4e586a 2px;
-    border-right: none;
     color: #F6AE2D;
-    font-size: 15px;
 }
 
-.arrowDropBtn{
-    width: 50px;
-    height: 55px;
-    background-color: #0A0A0A;
-    border: solid #4e586a 2px;
-    border-left: none;
-    color: #F6AE2D;
-    font-size: 15px;
-}
 
 #profileMenuPic img{
     height: 40px;
@@ -95,43 +88,16 @@ header .TopoDireita{
     background-size:cover;
 }
 
-.menuLoginBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
+.profileMenu:hover i{
+    color: #DD962C;
 }
 
-.menuLoginContent{
-    display: none;
-    position: bottom;
-    background-color: #4E586A;
-    min-width: 50px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    padding: 5px;
-    padding-top: 20px;
-    color: #0A0A0A;
-  }
-
-
-button:hover .menuLoginContent {
-    display: block;
-    background-color: #4e586a86;
-    color: #0A0A0A;
-    line-height: 20px;
+#profileMenuPic:hover img{
+    border:solid #DD962C 2px;
 }
 
 
 
-
-
-#Cadastre:hover{
-    background-color: #4e586a;
-    color: #F6AE2D;
-    padding: 14px;
-    border: solid 1px #DD962C;
-}
 
 header .LinksPrincipais{
     font-weight: bolder;
