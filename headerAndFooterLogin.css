@@ -249,17 +249,26 @@ footer .redes i:hover{
     header{
         display: flex;
         flex-direction: column;
-        height: auto;
+        flex-wrap: wrap;
         min-width: 100%;
         margin-bottom: 5px;
-        max-height: 50vh;
+        max-height: 70vh;
     }
 
     header .Topo{
         display: flex;
         flex-direction: column;
         align-items:center;
-        margin-bottom: 15px;
+    }
+
+    header .blank{
+        display: none;
+    }
+
+    .profileMenu{
+        justify-self: center;
+        align-self: center;
+        margin: 30px;
     }
 
     .dropdown:hover .dropdown-content {
@@ -271,18 +280,11 @@ footer .redes i:hover{
         max-width: 250px;
         height: auto;
     }
-
-    header .TopoDireita{
-        flex-direction: column-reverse;
-    }
-    
-    header .Direita{
-        margin-bottom: 15px;
-    }
       
     header .Barra{
         display: flex;
         flex-direction: column;
+        margin-top: 50px;
         
     } 
     
@@ -302,6 +304,7 @@ footer .redes i:hover{
         min-height: 40px;
         position: relative;
     }
+
 
 }
 
