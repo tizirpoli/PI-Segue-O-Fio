@@ -50,17 +50,19 @@ header .TopoDireita{
     height: 47px;
     width: 207px;
     margin-right: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    
 }
 
 .profileMenu{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: center;
     justify-items: center;
+    position: absolute;
 }
 
 #profileMenuPic{
@@ -96,6 +98,28 @@ header .TopoDireita{
     border:solid #DD962C 2px;
 }
 
+.dropdownLogged{
+    display: none;
+    background-color: #4e586ae7;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 5px;
+    padding-top: 20px;
+}
+
+.profileMenu:hover .dropdownLogged{
+    display: block;
+    position: relative;
+}
+
+header li{
+    padding: 10px;
+}
+
+header li:nth-child(even){
+    background-color: #4e586a2f;
+}
 
 
 
@@ -249,16 +273,28 @@ footer .redes i:hover{
     header{
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        min-width: 100%;
         margin-bottom: 5px;
-        max-height: 70vh;
+        max-height: 40vh;
+        height: 250px;
+        justify-content:space-between;
     }
 
     header .Topo{
         display: flex;
         flex-direction: column;
         align-items:center;
+        justify-content:space-between;
+        padding: 10px;
+        height: 100px;
+        
+    }
+
+    .Topo > .TopoDireita{
+        height: fit-content;
+        margin-right: 0;
+        margin-bottom: 0;
+        align-items: center;
+        justify-content: center;
     }
 
     header .blank{
@@ -266,9 +302,14 @@ footer .redes i:hover{
     }
 
     .profileMenu{
-        justify-self: center;
-        align-self: center;
+        justify-content: space-between;
         margin: 30px;
+    }
+
+    .profileMenu:hover .dropdownLogged{
+        font-size: 12px;
+        position: absolute;
+        background-color: #4e586ae5;
     }
 
     .dropdown:hover .dropdown-content {
@@ -276,15 +317,14 @@ footer .redes i:hover{
       }
 
     header img{
-        margin-bottom: 30px;
         max-width: 250px;
         height: auto;
     }
       
     header .Barra{
+        height: auto;
         display: flex;
         flex-direction: column;
-        margin-top: 50px;
         
     } 
     
