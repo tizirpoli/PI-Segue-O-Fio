@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="./headerAndFooterLogin.css">
+    <link rel="stylesheet" type="text/css" href="./dashboard.css">
+    <title>Painel de Controle | Segue o Fio</title>
+</head>
+
+<body>
+    <header>
+        <div class="Topo">
+            <div class="blank"></div>
+            <div class="logoTopo">
+                <img id="logo" src="./img/primarylogo_border.PNG.png" alt="Logo Principal">
+            </div>
+            <div class="TopoDireita">
+                <div class="profileMenu">
+                    <div id="profileMenuPic">
+                        <a href="./profileview.html">
+                            <img src="./img/profile4.jpg" alt="profile picture on dropdown menu"></a>
+                        <a href="#"><i class="fas fa-sort-down"></i></a>
+                    </div>
+                    <div class="dropdownLogged">
+                        <li><a href="./dashboard.html">Painel de Controle</a></li>
+                        <li><a href="./newthread.html">Crie um Novo Fio</a></li>
+                        <li><a href="./threadsmgmt.html">Gerenciar meus Fios</a></li>
+                        <li><a href="./profileview.html">Visualizar meu Perfil</a></li>
+                        <li><a href="./accountmgmt.html">Editar minha Conta</a></li>
+                        <br>
+                        <li class="logoutMenu"><a href="./login.html">Sair</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Barra">
+            <div class="leftBar">
+                <div class="LinksPrincipais"><a href="./index.html">Home</a></div>
+                <div class="LinksPrincipais"><a href="/">Ranking</a></div>
+                <div class="LinksPrincipais dropdown">
+                    <button class="dropbtn"><a href="/">Categorias</a></button>
+                    <div class="dropdown-content">
+                        <a href="./search.html">Aprendizagem</a><br>
+                        <a href="./search.html">Atualidades</a><br>
+                        <a href="./search.html">Curadoria</a><br>
+                        <a href="./search.html">Entretenimento</a><br>
+                        <a href="./categories.html">Ver todas</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightBar">
+                <div class="iconeLupa"><a href="./search.html"><i class="fas fa-search fa-lg"></a></i></div>
+                <div>
+                    <form action="" id="formBusca">
+                        <input class="Busca-texto" type="text">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <button class="mainMenu"><i class="fas fa-bars fa-2x"></i></button>
+        <div class="main">
+            <h2>Painel de Controle</h2>
+            <section class="halfTop">
+                <div class="halfTopLeft">
+                    <p class="textP">Bem vindo(a) de volta, @usuário</p>
+                    <button class="newThread"><i class="far fa-plus-square"></i> Adicione um novo Fio</button>
+                    <div class="draftsSummary">
+                        <ul class="titleUl">Finalize seus rascunhos</ul>
+                        <div class="draftsContent">
+                            <li><a href="">Nome Rascunho Salvo A</a></li>
+                            <li><a href="">Nome Rascunho Salvo B</a></li>
+                            <li><a href="">Nome Rascunho Salvo C</a></li>
+                            <li><a href="">Nome Rascunho Salvo D</a></li>
+                            <li><a href="">Nome Rascunho Salvo E</a></li>
+                            <li><a href="">Nome Rascunho Salvo F</a></li>
+                            <li><a href="">Nome Rascunho Salvo G</a></li>
+                            <li><a href="">Nome Rascunho Salvo H</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="halfTopRight">
+                    <img src="./img/dashboardImg.png" alt="carrossel dashboard">
+                </div>
+            </section>
+            <section class="halfBottom">
+                <div class="halfBottomLeft">
+                    <div class="viewsBar">
+                        <ul class="titleUl">Fios Mais Visualizados</ul>
+                        <div class="viewsContent">
+                            <li><a href="">Nome Rascunho Salvo A</a></li>
+                            <li><a href="">Fio Nome Tema A</a></li>
+                            <li><a href="">Fio Nome Tema A</a></li>
+                            <li><a href="">Fio Tema A</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="halfBottomRight">
+                    <div class="sharingBar">
+                        <ul class="titleUl">Fios Mais Compartilhados</ul>
+                        <div class="sharingContent">
+                            <li><a href="">Fio Tema A</a></li>
+                            <li><a href="">Fio Tema A</a></li>
+                            <li><a href="">Fio Tema A</a></li>
+                            <li><a href="">Fio Tema A</a></li>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="institucionais">
+            <div class="rodape"><a href="/">Sobre Nós</a></div>
+            <div class="rodape"><a href="/">Contato</a></div>
+            <div class="rodape"><a href="/">Créditos</a></div>
+        </div>
+        <div class="redes">
+            <a href="http://twitter.com/" target="_blank"><i class="fab fa-twitter-square fa-lg"></i></a>
+            <a href="http://facebook.com/" target="_blank"><i class="fab fa-facebook-square fa-lg"></i></a>
+            <a href="http://instagram.com/" target="_blank"><i class="fab fa-instagram-square fa-lg"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/f396ab4954.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

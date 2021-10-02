@@ -1,0 +1,363 @@
+*{
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #0A0A0A;
+    width: 100%;
+    max-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 5px #7B889E;
+    justify-content: center;
+}
+
+header a{
+    color: #F6AE2D;
+}
+
+header a:hover{
+    color:#DD962C;
+}
+
+header .Topo{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    height: 80px; 
+
+}
+
+header img{
+    height: 50px;
+    
+}
+
+.blank{
+    height: 47px;
+    width: 207px;
+}
+
+
+header .TopoDireita{
+    height: 47px;
+    width: 207px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.profileMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+}
+
+#profileMenuPic{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100px;
+    height: 70px;
+    background-color: #0A0A0A;
+    border: solid #4e586a 2px;
+    color: #F6AE2D;
+}
+
+
+#profileMenuPic img{
+    height: 40px;
+    width: 40px;
+    border: solid #f6ae2d 2px;
+    border-radius: 50px;
+    background-color: #0a0a0a;
+    margin: 5px;
+    background-image: url(./img/profile3.jpg);
+    background-position: center;
+    background-size:cover;
+}
+
+.profileMenu:hover i{
+    color: #DD962C;
+}
+
+#profileMenuPic:hover img{
+    border:solid #DD962C 2px;
+}
+
+.dropdownLogged{
+    display: none;
+    background-color: #4e586ae7;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 5px;
+    padding-top: 20px;
+}
+
+.profileMenu:hover .dropdownLogged{
+    display: block;
+    position: relative;
+}
+
+header li{
+    padding: 10px;
+}
+
+header li:nth-child(even){
+    background-color: #4e586a2f;
+}
+
+
+
+header .LinksPrincipais{
+    font-weight: bolder;
+    margin-right: 15px;
+}
+
+
+.dropbtn {
+    background-color: #0A0A0A;
+    width: auto;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 13px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4E586A;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 5px;
+    padding-top: 20px;
+  }
+
+  .dropdown-content a{
+    color: #0A0A0A;
+    
+}
+  .dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #DD962C;
+    width: 100%;
+}
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #4e586a86;
+    color: #0A0A0A;
+    width: 100%;
+    line-height: 20px;
+}
+
+  .dropdown:hover .dropbtn {
+    background-color: #dd962c;
+
+}
+
+.dropbtn a:hover{
+    color: #f5f5f5;
+}
+
+
+
+header .Barra{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    
+} 
+
+header .leftBar{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    margin-left: 23px;
+    margin-bottom: 10px;
+}
+
+header .rightBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.iconeLupa{
+    height: 15px;
+    margin-right: 5px;
+    color: #F6AE2D;
+}
+
+#formBusca{
+    border: 2px solid #4E586A;
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    padding: 2px 2px 2px 2px;
+    outline: 0;
+    background-color: #f5f5f5;
+}
+
+footer{
+    background-color: #0a0a0a;
+    width: 100%;
+
+    position: fixed;
+    bottom: 0px; 
+    width: 100%; 
+    height: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .institucionais{
+ 
+    background-color: #0A0A0A;
+    display: flex;
+    align-items: center;
+}
+
+footer .rodape{
+    
+    margin-left: 23px;
+}
+
+footer a{
+    color: #F6AE2D;
+    font-weight: bolder;
+}
+
+footer a:hover{
+    color:#DD962C;
+}
+
+footer .redes{
+    color:#F6AE2D;
+    align-content: center;
+    margin-right: 20px;
+}
+
+footer .redes i:hover{
+    color:#DD962C
+}
+
+@media screen and (max-width: 930px) {
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+        max-height: 40vh;
+        height: 250px;
+        justify-content:space-between;
+    }
+
+    header .Topo{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:space-between;
+        padding: 10px;
+        height: 100px;
+        
+    }
+
+    .Topo > .TopoDireita{
+        height: fit-content;
+        margin-right: 0;
+        margin-bottom: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .blank{
+        display: none;
+    }
+
+    .profileMenu{
+        justify-content: space-between;
+        margin: 30px;
+    }
+
+    .profileMenu:hover .dropdownLogged{
+        font-size: 12px;
+        position: absolute;
+        background-color: #4e586ae5;
+    }
+
+    .dropdown:hover .dropdown-content {
+        background-color: #4e586ae5;
+      }
+
+    header img{
+        max-width: 250px;
+        height: auto;
+    }
+      
+    header .Barra{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+    } 
+    
+    header .leftBar{
+        display: flex;
+        margin-bottom: 15px;
+        
+    }
+    
+    header .rightBar{
+        display: flex;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 40px;
+        position: relative;
+    }
+
+
+}
+
+@media screen and (max-width: 690px) {
+    footer{
+        flex-direction: column;
+        padding-bottom: 10px;
+        justify-content: center;
+    }
+    .institucionais{
+        padding: 5px;
+    }
+    .redes{
+        padding: 5px;
+    }
+}
