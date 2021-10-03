@@ -89,6 +89,13 @@ body{
     align-self: flex-end;
 }
 
+.aboutUsSocial a{
+    color: #0a0a0a;
+}
+.aboutUsSocial a:hover{
+    color: #DD962C;
+}
+
 @media screen and (max-width: 930px) {
     .aboutUsGrid{
         flex-direction: column;
