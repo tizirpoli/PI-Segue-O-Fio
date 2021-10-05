@@ -220,20 +220,6 @@
 }
 
 
-footer{
-    background-color: #0a0a0a;
-    width: 100%;
-
-    position: fixed;
-    bottom: 0px; 
-    width: 100%; 
-    height: 40px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .bttmRightBar .institucionais{
  
     background-color: #0A0A0A;
@@ -276,6 +262,30 @@ body{
     min-height: 100vh;
 }
 
+.mainMenu{
+    display: none;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: solid #0a0a0a 2px;
+    height: 50px;
+    width: 50px;
+    border-radius:50%;
+    position: absolute;
+    color: #0a0a0a;
+    background-color: #DD962C;
+}
+
+.mainMenu:hover{
+    border: solid #4e586a 2px;
+    background-color: #0A0A0A;
+    color: #F6AE2D;
+}
+
+.mainMenu:active{
+    background-color: #DD962C;
+    color: #0a0a0a;
+    transform: translateY(4px);
+}
 
 body .container{
     display: flex;
@@ -353,256 +363,64 @@ body .container{
     font-size: 12px;
 }
 
-
-
-
-
-
-
-
-.settingsBar1{
-    align-self: center;
+.moreOptions{
+    display: none;
     margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.settingsBar1 h3{
-    font-size: 20px;
-    color: #DD962C;
-}
-
-.settingsBar2{
-    display: flex;
-    flex-direction: column;
-}
-
-.settingsBarSplit{
-    display: flex;
-    justify-content:space-between;
-    padding: 5px;
-}
-
-.customSettings{
-    border: #0a0a0a 2px solid;
-    background-color: #DD962C;
+    margin-left: 10px;
+    border: solid #0a0a0a 2px;
+    height: 50px;
+    width: 60%;
     color: #0a0a0a;
-    width: 110px;
-    height: 55px;
-    margin: 5px;
+    background-color: #DD962C;
 }
 
-.customSettings:hover{
+.moreOptions:hover{
     border: solid #4e586a 2px;
     background-color: #0A0A0A;
     color: #F6AE2D;
 }
 
-.customSettings:active{
-    color: #0A0A0A;
-    background-color: #F6AE2D;
-    transform: translateY(4px);
-}
-
-.settingsBar3{
-    align-self: flex-start;
-    line-height: 35px;
-    font-size: 14px;
-    margin-left: 30px;
-}
-
-.settingsBar3 label{
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.settingsBar3 input{
-    margin-right: 5px;
-}
-
-.settingsBar4{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.publishPost{
-    border: #0a0a0a 2px solid;
+.moreOptions:active{
     background-color: #DD962C;
     color: #0a0a0a;
-    width: 110px;
-    height: 55px;
-    margin: 5px;
-}
-
-.publishPost:hover{
-    border: solid #4e586a 2px;
-    background-color: #0A0A0A;
-    color: #F6AE2D;
-}
-
-.publishPost:active{
-    color: #0A0A0A;
-    background-color: #F6AE2D;
     transform: translateY(4px);
 }
 
-.settingsBar4 p{
-    font-size: 12px;
-    text-align: center;
-}
-
-.settingsBar4 a{
-    text-decoration: none;
-    color: #DD962C;
-    font-size: 12px;
-    text-align: center;
-}
-
-.settingsBar4 a:hover{
-    color: #F6AE2D;
-    text-decoration: underline;
-}
-
-.settingsBar5{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: baseline;
-    margin-top: 30px;
-    height: 80px;
-}
-
-.deletePost{
-    border: #0a0a0a 2px solid;
-    background-color: #DD962C;
-    color: #0a0a0a;
-    width: 110px;
-    height: 25px;
-    margin: 5px;
-    font-size: 12px;
-}
-
-.deletePost:hover{
-    border: solid #fff 2px;
-    background-color: #ff0000;
-    color: #fff;
-}
-
-.deletePost:active{
-    color: #ff0000;
-    background-color: #fff;
-    transform: translateY(4px);
-}
-
-@media screen and (max-width:1326px) and (min-width:931px){
-
-    .leftNew{
-        display: none;
-    }
-
-    .postHeaderSelection{
-        width: 300px;
-    }
-
-    .settingsBar2{
-        height: 220px;
-    }
-    .settingsBarSplit{
-        flex-direction: column;
-        height: 110px;
-
-    }
-    .rightNew{
-        height: auto;
-    }
-
-    .settingsBar1 h3{
-        font-size: 15px;
-    }
-
-    .settingsBar3{
-        font-size: 12px;
-        
-    }
+@media screen and (max-width: 770px) {
     
-    .settingsBar3 label{
-        font-weight: bold;
-        font-size: 12px;
-    }
-
-    .settingsBar4{
-        margin-top: 0;
-    }
-
-    .settingsBar5{
-        margin-top: 5px;
-    }
-
-}
-
-    
-
-@media screen and (max-width: 930px) {
-    
-
-    .container{
-        flex-direction: column;
-        min-height: 100vh;
-        height: fit-content;
-    }
-
-    .leftNew{
-        display: none;
-    }
-
-    .breakPost{
-        display: none;
+    .mainMenu{
+        display: block;
     }
 
     .mainNew{
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .newPost, .imageUploads, .newPostThreadTitle, .newPostThreadDescription, .dropdownUploadGrid{
-        margin-top: 10px;
-    }
-
-    .dropdownUploadGrid{
-        margin-top: 10px;
-        height: 300px;
-    }
-
-    .postHeaderSelection{
-        width: 200px;
-    }
-
-    .breakPost{
-        display: none;
-    }
-
-    .rightNew{
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100vw;
         justify-content: center;
     }
 
-    .settingsBar3{
-        align-self: center;
-        margin: 0;
+    .container{
+        flex-direction: column;
+        max-height: 100vh;
+        height: fit-content;
+    }
+    .profileViewBar{
+        display: none;
     }
 
-    .settingsBar4{
-        margin-bottom: 10px;
-    }
-
-    .settingsBar5{
-        align-items: flex-start;
-        margin-top: 0;
+    .mainNew img{
+        margin-left: 15px;
+        max-width: 90%;
         height: auto;
+
     }
 
+    .rightNew{
+        display: none;
+    }
+
+    .moreOptions{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 }
