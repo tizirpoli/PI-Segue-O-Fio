@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="./headerAndFooterLogin.css">
+    <link rel="stylesheet" type="text/css" href="./accountmgmt.css">
+    <title>Painel de Controle | Segue o Fio</title>
+</head>
+
+<body>
+    <header>
+        <div class="Topo">
+            <div class="blank"></div>
+            <div class="logoTopo">
+                <img id="logo" src="./img/primarylogo_border.PNG.png" alt="Logo Principal">
+            </div>
+            <div class="TopoDireita">
+                <div class="profileMenu">
+                    <div id="profileMenuPic">
+                        <a href="./profileview.html">
+                            <img src="./img/profile4.jpg" alt="profile picture on dropdown menu"></a>
+                        <a href="#"><i class="fas fa-sort-down"></i></a>
+                    </div>
+                    <div class="dropdownLogged">
+                        <li><a href="./dashboard.html">Painel de Controle</a></li>
+                        <li><a href="./newthread.html">Crie um Novo Fio</a></li>
+                        <li><a href="./threadsmgmt.html">Gerenciar meus Fios</a></li>
+                        <li><a href="./profileview.html">Visualizar meu Perfil</a></li>
+                        <li><a href="./accountmgmt.html">Editar minha Conta</a></li>
+                        <br>
+                        <li class="logoutMenu"><a href="./login.html">Sair</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Barra">
+            <div class="leftBar">
+                <div class="LinksPrincipais"><a href="./index.html">Home</a></div>
+                <div class="LinksPrincipais"><a href="./ranking.html">Ranking</a></div>
+                <div class="LinksPrincipais dropdown">
+                    <button class="dropbtn"><a href="./categories.html">Categorias</a></button>
+                    <div class="dropdown-content">
+                        <a href="./search.html">Aprendizagem</a><br>
+                        <a href="./search.html">Atualidades</a><br>
+                        <a href="./search.html">Curadoria</a><br>
+                        <a href="./search.html">Entretenimento</a><br>
+                        <a href="./categories.html">Ver todas</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightBar">
+                <div class="iconeLupa"><a href="./search.html"><i class="fas fa-search fa-lg"></a></i></div>
+                <div>
+                    <form action="" id="formBusca">
+                        <input class="Busca-texto" type="text">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <button class="mainMenu"><i class="fas fa-bars fa-2x"></i></button>
+        <div class="mainBox">
+            <h2>Painel de Controle</h2>
+            <div class="editDashboard">
+                <div class="editBox">
+                    <h2>Meus Dados</h2>
+                    <h4>nome completo</h4>
+                    <p>Nome Sobrenome</p>
+                    <br>
+                    <h4>email</h4>
+                    <p>email@email.com</p>
+                    <br>
+                    <h4>usuário</h4>
+                    <p>@usuário</p>
+                    <br>
+                    <h4>celular</h4>
+                    <p>+55(00)00000-0000</p>
+                    <br>
+                    <h4>Bio</h4>
+                    <textarea name="bio" id="bio" cols="30" rows="10" disabled placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. "></textarea>
+                </div>
+                <div class="editBox">
+                    <h2>Editar Minha Conta</h2>
+                    <form action="">
+                        <label for="user">usuário</label>
+                        <input type="text" placeholder="@usuário">
+                        <button>Atualizar</button>
+                    </form>
+                    <br>
+                    <form action="">
+                        <label for="user">email</label>
+                        <input type="emai" placeholder="email@email.com">
+                        <label for="user">confirmar email</label>
+                        <input type="email" placeholder="email@email.com">
+                        <button>Atualizar</button>
+                    </form>
+                    <br>
+                    <form action="">
+                        <label for="user">celular</label>
+                        <input type="text" placeholder="email@email.com">
+                        <label for="user">confirmar celular</label>
+                        <input type="text" placeholder="email@email.com">
+                        <button>Atualizar</button>
+                    </form>
+                    <br>
+                    <form action="">
+                        <label for="user">senha</label>
+                        <input type="password" placeholder="email@email.com">
+                        <label for="user">confirmar senha</label>
+                        <input type="password" placeholder="email@email.com">
+                        <button>Atualizar</button>
+                    </form>
+                </div>
+                <div class="editBox">
+                    <h2>Editar Meu Perfil</h2>
+                    <div class="uploadProfilePictureBox">
+                        <i class="fas fa-camera fa-3x"></i>
+                    </div>
+                    <form action="">
+                        <label for="user">Nome Completo</label>
+                        <input type="text" placeholder="digite seu nome">
+                        <label for="user">Bio</label>
+                        <textarea class="bioUpdate" name="bioUpdate" id="bioUpdate" cols="30" rows="10"></textarea>
+                        <br>
+                        <button class="settingsUpdate">Definir Background</button>
+                        <button class="settingsUpdate">Vincular Redes Sociais</button>
+                        <br>
+                        <br>
+                        <button>Atualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="institucionais">
+            <div class="rodape"><a href="./about.html">Sobre Nós</a></div>
+            <div class="rodape"><a href="./contact.html">Contato</a></div>
+            <div class="rodape"><a href="./credits.html">Créditos</a></div>
+        </div>
+        <div class="redes">
+            <a href="http://twitter.com/" target="_blank"><i class="fab fa-twitter-square fa-lg"></i></a>
+            <a href="http://facebook.com/" target="_blank"><i class="fab fa-facebook-square fa-lg"></i></a>
+            <a href="http://instagram.com/" target="_blank"><i class="fab fa-instagram-square fa-lg"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/f396ab4954.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
