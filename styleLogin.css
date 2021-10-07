@@ -59,20 +59,7 @@ header .Direita{
     font-size: smaller;
 }
 
-#Cadastre{
-    margin-right: 15px;
-    padding: 15px;
-    background-color: #F6AE2D;
-    color: #0A0A0A;
-    font-size: 15px;
-}
 
-#Cadastre:hover{
-    background-color: #4e586a;
-    color: #F6AE2D;
-    padding: 14px;
-    border: solid 1px #DD962C;
-}
 
 header .LinksPrincipais{
     font-weight: bolder;
@@ -342,59 +329,31 @@ main{
     justify-content: center;
     border: 1px solid #0A0A0A;
 }
-#loginBtn{
-    color: #0A0A0A;
-}
 
-.iconesCad{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-#btnCad{
-    width: 150px;
-    height: 50px;
-    border: 1px solid #0a0a0a ;
-}
-
-#btnCad:hover{
-    border: 2px solid #0a0a0a ;
-}
-#cadastrar{
-    width: 150px;
-    min-height: 50px;
-    border: 1px solid #0a0a0a ;
-    margin-bottom: 15px;
-    color: white;
-    background: #0A0A0A;
-}
-.containerInput{
-    width: 400px;
-    min-height: 150px;
-    justify-content: space-around;
-
-}
-.containerInput input{
-    width: 100%;
-    height: 40px;
-    border: 1px solid #0A0A0A;
-    margin-bottom: 20px;
-}
-.btnCadastra{
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-}
-
-#teste{
+#container{
     border: 1px solid #0A0A0A;
     min-width: 500px;
     min-height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+}
+.containerInput{
+    display: flex;
+    flex-direction: column;
+}
+#btnCadastrar{
+    border: 1px solid #0A0A0A;
+    min-width: 80px;
+    min-height: 50px;
+}
+.boxBtnCenter{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+hr{
+    border: 1px solid #0A0A0A;
+    width: 90%;
 }

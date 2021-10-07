@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="./styleLogin.css">
+    <link rel="stylesheet" type="text/css" href="./responsive.css">
+    <title>Home | Segue o Fio</title>
+</head>
+
+<body>
+    <header>
+        <div class="Topo">
+            <div class="blank"></div>
+            <div class="logoTopo">
+                <img id="logo" src="/img/primarylogo_border.PNG.png" alt="Logo Principal">
+            </div>
+            <div class="TopoDireita">
+                <div class="Direita"><a href="/">Fazer Login</a></div>
+                <div class="Direita"></div><button id="Cadastre"><a id="loginBtn"
+                        href="./telaCadastrol.html">Cadastre-se</a></button>
+            </div>
+        </div>
+        </div>
+
+        <div class="Barra">
+            <div class="leftBar">
+                <div class="LinksPrincipais"><a href="/index.html">Home</a></div>
+                <div class="LinksPrincipais"><a href="/">Ranking</a></div>
+                <div class="LinksPrincipais dropdown">
+                    <button class="dropbtn"><a href="/">Categorias</a></button>
+                    <div class="dropdown-content">
+                        <a href="/">Categoria A</a><br>
+                        <a href="/">Categoria B</a><br>
+                        <a href="/">Categoria C</a><br>
+                        <a href="/">Ver todas</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightBar">
+                <div class="iconeLupa"><i class="fas fa-search fa-lg"></i></div>
+                <div>
+                    <form action="" id="formBusca">
+                        <input class="Busca-texto" type="text">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div id="container">
+
+            <h3 id="loginBtn">Acesse sua conta</h3>
+            <h4>Entrando com:</h4>
+
+            <div class="boxCadastro">
+
+                <div class="login">
+                    <div class="containerInput">
+                        <span>Usuário/Email</span>
+                        <input type="text" name="user" id="inputUser">
+                    </div>
+
+                    <div class="containerInput">
+                        <span>Senha</span>
+                        <input type="password" name="password" id="password">
+
+                        <a href="">esqueceu sua senha?</a>
+                    </div>
+
+                    <div class="boxBtnCenter">
+                        <button id="btnCadastrar">Login</button>
+                        <span>ou</span>
+                        <div class="iconesLogin">
+                            <button class="fab fa-twitter fa-2x " id="btnLogin"></button>
+                            <button class="fab fa-apple fa-2x " id="btnLogin"></button>
+                            <button class="fab fa-google fa-2x " id="btnLogin"></button>
+                            <button class="fab fa-facebook-f fa-2x" id="btnLogin"></button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+            <p>Ainda não é um membro? - <a href="./telaCadastrol.html">Cadastra-se</a> </p>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="institucionais">
+            <div class="rodape"><a href="/">Sobre Nós</a></div>
+            <div class="rodape"><a href="/">Contato</a></div>
+            <div class="rodape"><a href="/">Créditos</a></div>
+        </div>
+        <div class="redes">
+            <i class="fab fa-twitter-square fa-lg"></i>
+            <i class="fab fa-facebook-square fa-lg"></i>
+            <i class="fab fa-instagram-square fa-lg"></i>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/f396ab4954.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
