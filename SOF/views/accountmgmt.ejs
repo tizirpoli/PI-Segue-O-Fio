@@ -1,0 +1,80 @@
+<%- include('./partials/headerlogin') %>
+
+
+    <div class="containerAccMgmt">
+        <button class="mainMenu"><i class="fas fa-bars fa-2x"></i></button>
+        <div class="mainBox">
+            <h2>Painel de Controle</h2>
+            <div class="editDashboard">
+                <div class="editBox">
+                    <h2>Meus Dados</h2>
+                    <h4>nome completo</h4>
+                    <p>Nome Sobrenome</p>
+                    <br>
+                    <h4>email</h4>
+                    <p>email@email.com</p>
+                    <br>
+                    <h4>usuário</h4>
+                    <p>@usuário</p>
+                    <br>
+                    <h4>celular</h4>
+                    <p>+55(00)00000-0000</p>
+                    <br>
+                    <h4>Bio</h4>
+                    <textarea name="bio" id="bio" cols="30" rows="10" disabled placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. "></textarea>
+                </div>
+                <div class="editBox">
+                    <h2>Editar Minha Conta</h2>
+                    <form action="">
+                        <label for="user">usuário</label>
+                        <input type="text" placeholder="@usuário">
+                        <button>Atualizar</button>
+                    </form>
+                    <br>
+                    <form action="">
+                        <label for="user">email</label>
+                        <input type="emai" placeholder="email@email.com">
+                        <label for="user">confirmar email</label>
+                        <input type="email" placeholder="email@email.com">
+                        <button>Atualizar</button>
+                    </form>
+                    <br>
+                    <form action="">
+                        <label for="user">celular</label>
+                        <input type="text" placeholder="email@email.com">
+                        <label for="user">confirmar celular</label>
+                        <input type="text" placeholder="email@email.com">
+                        <button>Atualizar</button>
+                    </form>
+                    <br>
+                    <form action="">
+                        <label for="user">senha</label>
+                        <input type="password" placeholder="email@email.com">
+                        <label for="user">confirmar senha</label>
+                        <input type="password" placeholder="email@email.com">
+                        <button>Atualizar</button>
+                    </form>
+                </div>
+                <div class="editBox">
+                    <h2>Editar Meu Perfil</h2>
+                    <div class="uploadProfilePictureBox">
+                        <i class="fas fa-camera fa-3x"></i>
+                    </div>
+                    <form action="">
+                        <label for="user">Nome Completo</label>
+                        <input type="text" placeholder="digite seu nome">
+                        <label for="user">Bio</label>
+                        <textarea class="bioUpdate" name="bioUpdate" id="bioUpdate" cols="30" rows="10"></textarea>
+                        <br>
+                        <button class="settingsUpdate">Definir Background</button>
+                        <button class="settingsUpdate">Vincular Redes Sociais</button>
+                        <br>
+                        <br>
+                        <button>Atualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include('./partials/footer') %>
