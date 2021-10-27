@@ -2,15 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/home', function(req, res, next){
+router.get('/home', function(req, res){
   res.render('home', {title: 'Home page'});
 });
 
-router.get('/about', function(req, res, next){
+router.get('/about', function(req, res){
   res.render('about', {title: 'Sobre Nós'})
 })
 
@@ -24,10 +24,6 @@ router.get('/credits', function(req, res){
 
 router.get('/ranking', function(req, res){
   res.render('ranking', {title: 'Ranking'})
-})
-
-router.get('/categories', function(req, res){
-  res.render('categories', {title: 'Categorias'})
 })
 
 router.get('/search', function(req, res){

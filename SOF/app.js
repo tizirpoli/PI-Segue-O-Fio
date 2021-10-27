@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var categoriesRouter = require('./routes/categories')
 
 var app = express();
 
@@ -25,7 +26,7 @@ app.use('/home', indexRouter);
 app.use('/about', indexRouter);
 app.use('/credits', indexRouter);
 app.use('/ranking', indexRouter);
-app.use('/categories', indexRouter);
+app.use('/categories', categoriesRouter);
 app.use('/search', indexRouter);
 app.use('/dashboard', indexRouter);
 app.use('/newthread', indexRouter);
