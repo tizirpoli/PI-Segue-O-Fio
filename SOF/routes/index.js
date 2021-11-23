@@ -50,4 +50,16 @@ router.get('/accountmgmt', function(req, res){
   res.render('accountmgmt', {title: 'Edite Seu Perfil'})
 })
 
+router.get('/login', function(req, res){
+  res.render('login', {title: 'Login'})
+})
+
+router.post('/login', function(req, res){
+  let user = {
+    username: req.body.username,
+    password: req.body.paswword,
+  }
+  res.redirect('dashboard')
+})
+
 module.exports = router;

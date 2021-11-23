@@ -902,6 +902,105 @@ select:hover{
 
 /* Login */
 
+.containerLogin{
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.containerLogin .loginGrid{
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 400px;
+  margin: auto;
+  margin-top: 70px;
+  padding-top: 20px;
+  align-items: center;
+
+  border: 1px #4e586a  solid;
+  padding: 90px 20px;
+  
+
+  -webkit-box-shadow: 0px 0px 30px 0px #4e586aa6;
+  -moz-box-shadow:    0px 0px 30px 0px #4e586aa6;
+  box-shadow:         0px 0px 30px 0px #4e586aa6;
+}
+
+.containerLogin .loginGrid form{
+  display: flex;
+  flex-direction: column;
+}
+
+.containerLogin input{
+  width: 300px;
+  padding: 3px;
+}
+
+.containerLogin .loginBtn{
+  width: 100px;
+  height: 25px;
+  background-color: #F6AE2D;
+  color: #0A0A0A;
+  border: #0A0A0A solid 1px;
+  align-self: flex-end;
+}
+
+.containerLogin .loginBtn:hover{
+  background-color: #0A0A0A;
+  color: #F6AE2D;
+  border: solid 1px #DD962C;
+  
+}
+
+.containerLogin span{
+  font-size: smaller;
+  align-self: center;
+}
+
+.containerLogin .iconesLogin{
+  display: flex;
+  margin: auto;
+  width: 200px;
+  height: 40px;
+  align-items: center;
+  
+}
+
+.containerLogin .iconesLogin button{
+  width: 70px;
+  height: 30px;
+  background-color: #F6AE2D;
+  color: #0A0A0A;
+  border: #0A0A0A solid 1px;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+}
+
+.containerLogin .iconesLogin button:hover{
+  background-color: #0A0A0A;
+  color: #F6AE2D;
+  border: solid 1px #DD962C;
+  
+}
+
+
+@media screen and (max-width: 930px){
+
+  .containerLogin .loginGrid{
+    width: 300px;
+  }
+
+  .containerLogin input{
+    width: 220px;
+  }
+}
+
 /* End of Login */
 
 /* Sign Up */
@@ -1998,6 +2097,9 @@ select:hover{
 }
 
 /* END OF THREADS MGMT */
+
+
+
 
 /* ACC MGMT */
 

@@ -32,6 +32,8 @@ app.use('/dashboard', indexRouter);
 app.use('/newthread', indexRouter);
 app.use('/threadsmgmt', indexRouter);
 app.use('/profileview', indexRouter);
+app.use('/login', indexRouter);
+
 
 
 
