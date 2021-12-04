@@ -1,14 +1,18 @@
 var express = require('express');
 var router = express.Router();
+const homeController = require('../controllers/homeControler');
 
 /* GET home page. */
 router.get('/', function (req, res) {
   res.render('home', { title: 'Home page' });
 });
 
-router.get('/home', function (req, res) {
+router.get('/', function (req, res) {
   res.render('home', { title: 'Home page' });
 });
+
+router.post('/home', homeController.post);
+router.post('/', homeController.post);
 
 router.get('/about', function (req, res) {
   res.render('about', { title: 'Sobre Nós' })

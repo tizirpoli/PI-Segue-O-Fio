@@ -18,10 +18,11 @@
             <section class="blobMid2">
                 <h3>Faça agora o seu</h3>
                 <div class="mailMid">
-                    <form action="" class="formSignUp">
-                        <input class="Busca-texto" type="text">
+                    <form method="POST" action="" class="formSignUp">
+                        <input class="Busca-texto" type="text" placeholder="Digite seu e-mail">
+                        <button><i role="button" action="post" id="envelope" class="far fa-envelope fa-2x"></i></button>
                     </form>
-                    <i id="envelope" class="far fa-envelope fa-2x"></i>
+
                 </div>
             </section>
             <section class="blobMid3">
@@ -37,12 +38,12 @@
         <div class="homeBottom">
             <h4>Indique um Amigo</h4>
             <div class="mailMid">
-                <form action="" id="formsignUp">
-                    <input class="Busca-texto" type="text">
+                <form class="form-indique" method="post" action="" id="formsignUp">
+                    <input class="Busca-texto" type="text" placeholder="Digite o e-mail" name="emailIndicado">
+                    <button class="indiqueBttn" type="submit"><i id="envelopeindique"
+                            class="far fa-envelope fa-2x"></i></button>
                 </form>
-                <i id="envelopeindique" class="far fa-envelope fa-2x"></i>
             </div>
         </div>
     </div>
     <%- include('./partials/footer') %>
-
