@@ -66,4 +66,8 @@ router.post('/login', function (req, res) {
   res.redirect('dashboard')
 })
 
+router.get('/signUp', function (req, res) {
+  res.render('signUp', { title: 'Cadastro' })
+})
+
 module.exports = router;

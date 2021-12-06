@@ -63,14 +63,14 @@ header .UserBlock{
   width: 500px;
 }
 
-header button{
+header .signUpBttn{
     padding: 15px;
     background-color: #F6AE2D;
     color: #0A0A0A;
     font-size: 15px;
 }
 
-header button:hover{
+header .signUpBttn:hover{
   background-color: #4e586a;
   color: #F6AE2D;
   padding: 14px;
@@ -639,6 +639,10 @@ h1{
   margin-bottom: 15px;
   border: solid 2px #4e586a65;
 }
+
+input{
+  border: solid 2px #4e586a65
+}
 input:hover{
   border: solid 2px #F6AE2D;
 }
@@ -1082,6 +1086,59 @@ select:hover{
 /* End of Login */
 
 /* Sign Up */
+
+.containerSignUp{
+  height: 100vh;
+  margin-top: 150px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerSignUp .mainBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerSignUp h2{
+  margin-bottom: 10px;
+}
+
+.signUpBox{
+  max-height: 100%;
+  width: 350px;
+  border: solid 2px #4e586a65;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+.signUpBox form{
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.signUpBox button{
+    width: 100px;
+    height: 25px;
+    background-color: #F6AE2D;
+    color: #0A0A0A;
+    border: #0A0A0A solid 1px;
+    align-self: flex-end;
+  }
+  
+.signUpBox button:hover{
+  background-color: #0A0A0A;
+  color: #F6AE2D;
+  border: solid 1px #DD962C;
+
+}
+
+
 
 /* End Of SignUp */
 
