@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const homeController = require('../controllers/homeControler');
+const signupController = require('../controllers/signUpController');
 
 /* GET home page. */
 router.get('/', function (req, res) {
@@ -69,5 +70,7 @@ router.post('/login', function (req, res) {
 router.get('/signUp', function (req, res) {
   res.render('signUp', { title: 'Cadastro' })
 })
+
+router.post('/signUp', signupController.store);
 
 module.exports = router;

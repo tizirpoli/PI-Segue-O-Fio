@@ -6,7 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var categoriesRouter = require('./routes/categories')
+var categoriesRouter = require('./routes/categories');
+const { signUpController } = require('./controllers/signUpController');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use('/newthread', indexRouter);
 app.use('/threadsmgmt', indexRouter);
 app.use('/profileview', indexRouter);
 app.use('/login', indexRouter);
+app.use('/signUp', indexRouter);
 
 
 
