@@ -4,6 +4,7 @@ var router = express.Router();
 const homeController = require('../controllers/homeControler');
 const loginController = require('../controllers/loginController');
 const signupController = require('../controllers/signUpController');
+const { check, body, validationResult } = require('express-validator');
 
 let auth = require('../middlewares/auth.js');
 
@@ -44,13 +45,36 @@ router.get('/login', function (req, res) {
   res.render('login', { title: 'Login' })
 })
 
-router.post('/login', loginController.loginUser);
+router.post('/login', [
+  check('email')
+    .isEmail()
+    .withMessage("Digite um email válido")
+], loginController.loginUser);
 
 router.get('/signUp', function (req, res) {
   res.render('signUp', { title: 'Cadastro' })
 })
 
-router.post('/signUp', signupController.store);
+router.post('/signUp', [
+  check('fullName')
+    .isLength({ min: 3 })
+    .withMessage("O nome do usuário deve conter no mínimo 3 caracteres"),
+  check('user')
+    .isLength({ min: 4 })
+    .withMessage("O usuário deve conter no mínimo 4 caracteres"),
+  check('email')
+    .isEmail()
+    .withMessage("Digite um email válido"),
+  check('emailConfirmation')
+    .equals('email')
+    .withMessage('O Email de confirmação deve ser igual ao email digitado anteriormente.'),
+  check('password')
+    .isLength({ min: 4 })
+    .withMessage("A senha deve conter no mínimo 4 caracteres"),
+  check('passwordConfirmation')
+    .equals('password')
+    .withMessage("A senha de confirmação deve ser igual à senha digitada anteriormente"),
+], signupController.store);
 
 router.get('/dashboard', auth, function (req, res) {
   res.render('dashboard', { title: 'Painel de Controle', user: req.session.user })

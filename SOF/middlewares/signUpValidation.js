@@ -2,17 +2,27 @@ const { check, body, validationResult } = require('express-validator');
 
 const validateSignUp = [
     check('fullName')
+        .isEmpty()
         .isLength({ min: 3 })
-        .isString
         .isAlphanumeric(String['pt-BR']),
     check('user')
-        .isLength({ min: 4 })
-        .isString,
+        .isEmpty()
+        .isLength({ min: 4 }),
     check('email')
-        .isEmail,
+        .isEmpty()
+        .isEmail(),
     check('emailConfirmation')
-        .isEmail,
-    check()
+        .isEmpty()
+        .isEmail()
+        .equals('email'),
+    check('password')
+        .isEmpty()
+        .isLength({ min: 4 }),
+    check('passwordConfirmation')
+        .isEmpty()
+        .equals('password'),
+    check('phone')
+        .isInt
 ];
 
 module.exports = validateSignUp;

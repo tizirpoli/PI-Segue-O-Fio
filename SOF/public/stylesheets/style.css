@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+.error li{
+  padding-left: 10px;
+  padding-right: 10px;
+  list-style-position: inside;
+  font-size: 10px;
+  background-color: rgba(228, 120, 120, 0.877);
+}
+
 header{
   display: flex;
   justify-content: space-between;
