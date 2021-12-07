@@ -5,7 +5,7 @@
         <div class="mainBox">
             <h2>Cadastre-se!</h2>
             <div class="signUpBox">
-                <form action="/signUp" method="POST">
+                <form action="/signUp" method="POST" enctype="multipart/form-data">
                     <% if(typeof(errors) !="undefined" ) { %>
                         <div class="error">
                             <ul>

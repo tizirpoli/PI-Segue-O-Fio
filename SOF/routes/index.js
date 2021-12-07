@@ -5,8 +5,18 @@ const homeController = require('../controllers/homeControler');
 const loginController = require('../controllers/loginController');
 const signupController = require('../controllers/signUpController');
 const { check, body, validationResult } = require('express-validator');
+const multer = require('multer');
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/uploads/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname)
+  }
+})
 
-let auth = require('../middlewares/auth.js');
+var upload = multer({ storage: storage });
+const auth = require('../middlewares/auth.js');
 
 /* GET home page. */
 router.get('/', function (req, res) {
@@ -55,25 +65,25 @@ router.get('/signUp', function (req, res) {
   res.render('signUp', { title: 'Cadastro' })
 })
 
-router.post('/signUp', [
+router.post('/signUp', upload.single('avatar'), [
   check('fullName')
     .isLength({ min: 3 })
     .withMessage("O nome do usuário deve conter no mínimo 3 caracteres"),
-  check('user')
+  check('username')
     .isLength({ min: 4 })
     .withMessage("O usuário deve conter no mínimo 4 caracteres"),
   check('email')
     .isEmail()
     .withMessage("Digite um email válido"),
-  check('emailConfirmation')
-    .equals('email')
-    .withMessage('O Email de confirmação deve ser igual ao email digitado anteriormente.'),
+  // check('emailConfirmation')
+  //   .equals(req.body.email)
+  //   .withMessage('O Email de confirmação deve ser igual ao email digitado anteriormente.'),
   check('password')
     .isLength({ min: 4 })
     .withMessage("A senha deve conter no mínimo 4 caracteres"),
-  check('passwordConfirmation')
-    .equals('password')
-    .withMessage("A senha de confirmação deve ser igual à senha digitada anteriormente"),
+  // check('passwordConfirmation')
+  //   .equals(req.body.password)
+  //   .withMessage("A senha de confirmação deve ser igual à senha digitada anteriormente"),
 ], signupController.store);
 
 router.get('/dashboard', auth, function (req, res) {
@@ -81,19 +91,19 @@ router.get('/dashboard', auth, function (req, res) {
 })
 
 router.get('/newthread', auth, function (req, res) {
-  res.render('newthread', { title: 'Nvo Fio' })
+  res.render('newthread', { title: 'Nvo Fio', user: req.session.user })
 })
 
 router.get('/threadsmgmt', auth, function (req, res) {
-  res.render('threadsmgmt', { title: 'Gerencie Seus Fios' })
+  res.render('threadsmgmt', { title: 'Gerencie Seus Fios', user: req.session.user })
 })
 
 router.get('/profileview', auth, function (req, res) {
-  res.render('profileview', { title: 'Perfil de @Usuário | Segue o Fio' })
+  res.render('profileview', { title: 'Perfil de @Usuário | Segue o Fio', user: req.session.user })
 })
 
 router.get('/accountmgmt', auth, function (req, res) {
-  res.render('accountmgmt', { title: 'Edite Seu Perfil' })
+  res.render('accountmgmt', { title: 'Edite Seu Perfil', user: req.session.user })
 })
 
 module.exports = router;

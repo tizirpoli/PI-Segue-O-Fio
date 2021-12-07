@@ -8,7 +8,7 @@
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 
-    
+
 
     <title>
         <%= title %>
@@ -24,19 +24,19 @@
             <a href="/search">Busca</a>
         </nav>
         <section class="main-logo">
-                <img src="/images/primarylogo_border.png" alt="Logo Principal">
+            <img src="/images/primarylogo_border.png" alt="Logo Principal">
         </section>
         <section class="alternative-logo">
             <img class="logoIcon" src="/images/icon.png" alt="Logo Alternativo">
         </section>
-        
+
         <section class="UserBlock">
-            
+
             <div class="TopoDireita">
                 <div class="profileMenu">
                     <div id="profileMenuPic">
                         <a href="/profileview">
-                            <img src="/images/profile4.jpg" alt="profile picture on dropdown menu"></a>
+                            <img src='../../<%= user.avatar.path %>' alt="profile picture on dropdown menu"></a>
                         <a href="#"><i class="fas fa-sort-down"></i></a>
                     </div>
                     <div class="dropdownLogged">
@@ -50,12 +50,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-           
+            </div>
+
         </section>
     </header>
-
-
-
-
-

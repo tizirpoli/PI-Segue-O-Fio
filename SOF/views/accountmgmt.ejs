@@ -9,19 +9,28 @@
                 <div class="editBox">
                     <h2>Meus Dados</h2>
                     <h4>nome completo</h4>
-                    <p>Nome Sobrenome</p>
+                    <p>
+                        <%= user.name %>
+                    </p>
                     <br>
                     <h4>email</h4>
-                    <p>email@email.com</p>
+                    <p>
+                        <%= user.email %>
+                    </p>
                     <br>
                     <h4>usuário</h4>
-                    <p>@usuário</p>
+                    <p>
+                        <%= user.username %>
+                    </p>
                     <br>
                     <h4>celular</h4>
-                    <p>+55(00)00000-0000</p>
+                    <p>
+                        <%= user.phone %>
+                    </p>
                     <br>
                     <h4>Bio</h4>
-                    <textarea name="bio" id="bio" cols="30" rows="10" disabled placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. "></textarea>
+                    <textarea name="bio" id="bio" cols="30" rows="10" disabled
+                        placeholder=" <%= user.bioUpdate %>"></textarea>
                 </div>
                 <div class="editBox">
                     <h2>Editar Minha Conta</h2>
@@ -77,4 +86,4 @@
         </div>
     </div>
 
-<%- include('./partials/footer') %>
+    <%- include('./partials/footer') %>
