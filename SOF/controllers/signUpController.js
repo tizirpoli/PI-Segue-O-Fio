@@ -19,11 +19,11 @@ const signUpController = {
             bioUpdate: req.body.bioUpdate,
         }
 
-        fs.writeFileSync(userDb, JSON.stringify(newUser, null, 2));
+        fs.writeFileSync(userDb, JSON.stringify(newUser, null, 2), { encoding: 'utf-8' });
 
         console.log(newUser);
 
-        res.redirect('/dashboard', 200);
+        return res.redirect('/login', 200);
     },
 
 };

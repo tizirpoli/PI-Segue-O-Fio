@@ -1,12 +1,15 @@
 <%- include('./partials/headerlogin') %>
-<div class="containerDashboard">
+    <div class="containerDashboard">
         <button class="mainMenu"><i class="fas fa-bars fa-2x"></i></button>
-        
+
         <div class="main">
-            <h1><%= title %></h1>
+            <h1>
+                <%= title %>
+            </h1>
             <section class="halfTop">
                 <div class="halfTopLeft">
-                    <p class="textP">Bem vindo(a) de volta, @usuário</p>
+                    <p class="textP">Bem vindo(a) de volta, <%= user.name %>
+                    </p>
                     <button class="newThread"><i class="far fa-plus-square"></i> Adicione um novo Fio</button>
                     <div class="draftsSummary">
                         <ul class="titleUl">Finalize seus rascunhos</ul>
