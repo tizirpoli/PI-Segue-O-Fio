@@ -72,18 +72,20 @@ router.post('/signUp', upload.single('avatar'), [
   check('username')
     .isLength({ min: 4 })
     .withMessage("O usuário deve conter no mínimo 4 caracteres"),
-  check('email')
-    .isEmail()
-    .withMessage("Digite um email válido"),
-  // check('emailConfirmation')
-  //   .equals(req.body.email)
-  //   .withMessage('O Email de confirmação deve ser igual ao email digitado anteriormente.'),
-  check('password')
-    .isLength({ min: 4 })
-    .withMessage("A senha deve conter no mínimo 4 caracteres"),
-  // check('passwordConfirmation')
-  //   .equals(req.body.password)
-  //   .withMessage("A senha de confirmação deve ser igual à senha digitada anteriormente"),
+  body('password').isLength({ min: 4 }).withMessage("A senha deve conter no mínimo 4 caracteres"),
+  body('passwordConfirmation').custom((value, { req }) => {
+    if (value !== req.body.password) {
+      throw new Error('A senha de confirmação deve ser igual à senha digitada');
+    }
+    return true;
+  }).withMessage("A senha de confirmação deve ser igual à senha digitada"),
+  body('email').isEmail().withMessage("Digite um email válido"),
+  body('emailConfirmation').custom((value, { req }) => {
+    if (value !== req.body.email) {
+      throw new Error('O Email de confirmação deve ser igual ao email digitado');
+    }
+    return true;
+  }).withMessage("O Email de confirmação deve ser igual ao email digitado"),
 ], signupController.store);
 
 router.get('/dashboard', auth, function (req, res) {
@@ -105,5 +107,7 @@ router.get('/profileview', auth, function (req, res) {
 router.get('/accountmgmt', auth, function (req, res) {
   res.render('accountmgmt', { title: 'Edite Seu Perfil', user: req.session.user })
 })
+
+router.get('/logout', auth, loginController.logout);
 
 module.exports = router;

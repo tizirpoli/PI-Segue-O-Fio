@@ -1,21 +1,21 @@
 {
-  "id": "23416a1ea9763e",
+  "id": "310897ec6c8c76",
   "name": "TIAGO ZIRPOLI",
-  "username": "@tiagoo",
+  "username": "@tiago",
   "email": "tizirpoli@gmail.com",
   "emailConfirmation": "tizirpoli@gmail.com",
   "phone": "11999999999",
-  "password": "$2b$10$KiF.Y3Pq4BglOEq7LQo4RO25sK4IAUH5RwTscVJmRUhCjoneW7WJS",
-  "passwordConfirmation": "$2b$10$XE3GbLUBumYcRIOaacgjk.MKpsIzoaGDV.o0MjfPYRntOck.NqHPy",
-  "bioUpdate": "askldjalksjdlaksjdlkajsdkl",
+  "password": "$2b$10$MT0Cqm5PUgBCXO118er0f.v0R789IMb7OakkpxW7hhHmMSeT0EuR.",
+  "passwordConfirmation": "$2b$10$pSEoG9aYvzzpw2jTWLFrX.dL.btNzj7YdZQNHMsva9mG3QjtL6UF.",
+  "bioUpdate": "aksjdlajsdlakjsdlk",
   "avatar": {
     "fieldname": "avatar",
-    "originalname": "IMG_0958.jpg",
+    "originalname": "image.jpeg",
     "encoding": "7bit",
     "mimetype": "image/jpeg",
-    "destination": "uploads/",
-    "filename": "IMG_0958.jpg",
-    "path": "uploads/IMG_0958.jpg",
-    "size": 38919
+    "destination": "public/uploads/",
+    "filename": "image.jpeg",
+    "path": "public/uploads/image.jpeg",
+    "size": 511509
   }
 }

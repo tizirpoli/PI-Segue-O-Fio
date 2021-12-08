@@ -3,6 +3,7 @@ const path = require('path');
 const myuid = require('myuid');
 const bcrypt = require('bcrypt');
 const { check, body, validationResult } = require('express-validator');
+const session = require('express-session');
 
 let usuarios = path.join('users.json');
 
@@ -23,10 +24,14 @@ const userLogin = {
             } else {
                 req.session.user = userList;
 
-                return res.redirect('/dashboard', { user: req.session.user });
+                res.redirect('/dashboard');
             }
         } return res.render('login', { title: "Login", errors: errorsList.errors })
 
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('login')
     }
 }
 
