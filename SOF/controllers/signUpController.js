@@ -43,7 +43,6 @@ const signUpController = {
             fs.writeFileSync(userDb, JSON.stringify(newUser, null, 2), { encoding: 'utf-8' });
 
             console.log(newUser);
-            console.log(req.file);
 
 
             return res.redirect(200, '/login');

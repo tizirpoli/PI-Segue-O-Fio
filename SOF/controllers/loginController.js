@@ -23,7 +23,6 @@ const userLogin = {
                 return res.redirect('/login')
             } else {
                 req.session.user = userList;
-
                 res.redirect('/dashboard');
             }
         } return res.render('login', { title: "Login", errors: errorsList.errors })
