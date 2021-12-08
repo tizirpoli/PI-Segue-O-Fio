@@ -34,40 +34,39 @@
                 </div>
                 <div class="editBox">
                     <h2>Editar Minha Conta</h2>
-                    <form action="">
-                        <label for="user">usuário</label>
-                        <input type="text" placeholder="@usuário">
-                        <button>Atualizar</button>
+                    <form action="/accountmgmt" method="post">
+                        <label for="username">usuário</label>
+                        <input type="text" name="username" placeholder="@usuário">
+                        <button type="submit">Atualizar</button>
                     </form>
                     <br>
-                    <form action="">
-                        <label for="user">email</label>
-                        <input type="emai" placeholder="email@email.com">
-                        <label for="user">confirmar email</label>
-                        <input type="email" placeholder="email@email.com">
-                        <button>Atualizar</button>
+                    <form action="/accountmgmt" method="post">
+                        <label for="email">email</label>
+                        <input type="email" name="email" placeholder="email@email.com">
+                        <label for="emailConfirmation">confirmar email</label>
+                        <input type="email" name="emailConfirmation" placeholder="email@email.com">
+                        <button type="submit">Atualizar</button>
                     </form>
                     <br>
-                    <form action="">
-                        <label for="user">celular</label>
-                        <input type="text" placeholder="email@email.com">
-                        <label for="user">confirmar celular</label>
-                        <input type="text" placeholder="email@email.com">
-                        <button>Atualizar</button>
+                    <form action="/accountmgmt" method="post">
+                        <label for="phone">celular</label>
+                        <input type="text" name="phone" placeholder="(XX) XXXXX-XXXX">
+                        <button type="submit">Atualizar</button>
                     </form>
                     <br>
-                    <form action="">
-                        <label for="user">senha</label>
-                        <input type="password" placeholder="email@email.com">
-                        <label for="user">confirmar senha</label>
-                        <input type="password" placeholder="email@email.com">
-                        <button>Atualizar</button>
+                    <form action="/accountmgmt" method="post">
+                        <label for="password">senha</label>
+                        <input type="password" name="password" placeholder="email@email.com">
+                        <label for="passwordConfirmation">confirmar senha</label>
+                        <input type="password" name="passwordConfirmation" placeholder="email@email.com">
+                        <button type="submit">Atualizar</button>
+                        <br>
                     </form>
                 </div>
                 <div class="editBox">
                     <h2>Editar Meu Perfil</h2>
                     <div class="uploadProfilePictureBox">
-                        <i class="fas fa-camera fa-3x"></i>
+                        <img src='/<%=user.avatar.path%>' alt="avatar">
                     </div>
                     <form action="">
                         <label for="user">Nome Completo</label>
@@ -85,5 +84,6 @@
             </div>
         </div>
     </div>
+
 
     <%- include('./partials/footer') %>

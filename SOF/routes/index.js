@@ -16,7 +16,8 @@ var storage = multer.diskStorage({
 })
 
 var upload = multer({ storage: storage });
-const auth = require('../middlewares/auth.js');
+const auth = require('../middlewares/auth');
+const signUpController = require('../controllers/signUpController');
 
 /* GET home page. */
 router.get('/', function (req, res) {
@@ -107,6 +108,8 @@ router.get('/profileview', auth, function (req, res) {
 router.get('/accountmgmt', auth, function (req, res) {
   res.render('accountmgmt', { title: 'Edite Seu Perfil', user: req.session.user })
 })
+
+router.post('/accountmgmt', auth, signUpController.updateUsername);
 
 router.get('/logout', auth, loginController.logout);
 

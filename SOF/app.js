@@ -42,6 +42,7 @@ app.use('/threadsmgmt', indexRouter);
 app.use('/profileview', indexRouter);
 app.use('/login', indexRouter);
 app.use('/signUp', indexRouter);
+app.use('/accountmgmt', indexRouter);
 
 
 
