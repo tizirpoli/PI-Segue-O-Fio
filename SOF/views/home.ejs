@@ -1,0 +1,49 @@
+<%- include('./partials/header') %>
+
+    <div class="Container">
+        <div class="Main">
+            <img src="/images/mainImageHome.gif" alt="Carrossel fake">
+        </div>
+
+        <div class="Mid">
+            <section class="blobMid1">
+                <h3>Ranking</h3>
+                <ol>
+                    <li>Fio A</li>
+                    <li>Fio B</li>
+                    <li>Fio C</li>
+                    <li>Fio D</li>
+                </ol>
+            </section>
+            <section class="blobMid2">
+                <h3>Faça agora o seu</h3>
+                <div class="mailMid">
+                    <form method="POST" action="" class="formSignUp">
+                        <input class="Busca-texto" type="text" placeholder="Digite seu e-mail">
+                        <button><i role="button" action="post" id="envelope" class="far fa-envelope fa-2x"></i></button>
+                    </form>
+
+                </div>
+            </section>
+            <section class="blobMid3">
+                <h3>Descubra</h3>
+                <ul>
+                    <li>Fio Novo A</li>
+                    <li>Fio Novo B</li>
+                    <li>Fio Novo C</li>
+                    <li>Fio Novo D</li>
+                </ul>
+            </section>
+        </div>
+        <div class="homeBottom">
+            <h4>Indique um Amigo</h4>
+            <div class="mailMid">
+                <form class="form-indique" method="post" action="" id="formsignUp">
+                    <input class="Busca-texto" type="text" placeholder="Digite o e-mail" name="emailIndicado">
+                    <button class="indiqueBttn" type="submit"><i id="envelopeindique"
+                            class="far fa-envelope fa-2x"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer') %>

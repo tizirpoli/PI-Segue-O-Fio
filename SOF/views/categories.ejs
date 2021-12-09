@@ -1,0 +1,37 @@
+<%- include('./partials/header') %>
+
+
+    <div class="containerCategories">
+        <div class="main">
+            <div class="pageTitle"><%= title %></div>
+            <div class="categoriesGrid">
+                <% 
+                let info = [
+                    {nome: 'Aprendizagem', fontface: 'fas fa-graduation-cap fa-2x'},
+                    {nome: 'Atualidades', fontface: 'far fa-newspaper fa-2x'},
+                    {nome: 'Curadoria', fontface: 'fas fa-clipboard-list fa-2x'},
+                    {nome: 'Entretenimento', fontface: 'fas fa-film fa-2x'},
+                    {nome: 'Esportes', fontface: 'fas fa-futbol fa-2x'},
+                    {nome: 'Eventos', fontface: 'fas fa-calendar-alt fa-2x'},
+                    {nome: 'Música', fontface: 'fas fa-music fa-2x'},
+                    {nome: 'Newsletter', fontface: 'fas fa-envelope-open-text fa-2x'},
+                    {nome: 'Podcast', fontface: 'fas fa-podcast fa-2x'},
+                    {nome: 'Portifolio', fontface: 'fas fa-user-tie fa-2x'},
+                    {nome: 'Referências', fontface: 'fas fa-paperclip fa-2x'},
+                    {nome: 'Saúde', fontface: 'fas fa-heartbeat fa-2x'},
+                    {nome: 'Tutoriais', fontface: 'far fa-question-circle fa-2x'},
+                    {nome: 'Viagem', fontface: 'fas fa-map-marked-alt fa-2x'},
+                    {nome: 'Vídeo', fontface: 'fab fa-youtube fa-2x'},
+                ];
+
+                for (i=0; i < info.length; i++) { %>
+                <div class="catItem">
+                    <i class="<%= info[i].fontface %>"></i>
+                    <%= info[i].nome %>
+                </div>
+                <% }; %>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./partials/footer') %>

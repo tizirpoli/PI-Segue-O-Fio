@@ -1,0 +1,89 @@
+<%- include('./partials/headerlogin') %>
+
+
+    <div class="containerAccMgmt">
+        <button class="mainMenu"><i class="fas fa-bars fa-2x"></i></button>
+        <div class="mainBox">
+            <h2>Painel de Controle</h2>
+            <div class="editDashboard">
+                <div class="editBox">
+                    <h2>Meus Dados</h2>
+                    <h4>nome completo</h4>
+                    <p>
+                        <%= user.name %>
+                    </p>
+                    <br>
+                    <h4>email</h4>
+                    <p>
+                        <%= user.email %>
+                    </p>
+                    <br>
+                    <h4>usuário</h4>
+                    <p>
+                        <%= user.username %>
+                    </p>
+                    <br>
+                    <h4>celular</h4>
+                    <p>
+                        <%= user.phone %>
+                    </p>
+                    <br>
+                    <h4>Bio</h4>
+                    <textarea name="bio" id="bio" cols="30" rows="10" disabled
+                        placeholder=" <%= user.bioUpdate %>"></textarea>
+                </div>
+                <div class="editBox">
+                    <h2>Editar Minha Conta</h2>
+                    <form action="/accountmgmt" method="post">
+                        <label for="username">usuário</label>
+                        <input type="text" name="username" placeholder="@usuário">
+                        <button type="submit">Atualizar</button>
+                    </form>
+                    <br>
+                    <form action="/accountmgmt" method="post">
+                        <label for="email">email</label>
+                        <input type="email" name="email" placeholder="email@email.com">
+                        <label for="emailConfirmation">confirmar email</label>
+                        <input type="email" name="emailConfirmation" placeholder="email@email.com">
+                        <button type="submit">Atualizar</button>
+                    </form>
+                    <br>
+                    <form action="/accountmgmt" method="post">
+                        <label for="phone">celular</label>
+                        <input type="text" name="phone" placeholder="(XX) XXXXX-XXXX">
+                        <button type="submit">Atualizar</button>
+                    </form>
+                    <br>
+                    <form action="/accountmgmt" method="post">
+                        <label for="password">senha</label>
+                        <input type="password" name="password" placeholder="email@email.com">
+                        <label for="passwordConfirmation">confirmar senha</label>
+                        <input type="password" name="passwordConfirmation" placeholder="email@email.com">
+                        <button type="submit">Atualizar</button>
+                        <br>
+                    </form>
+                </div>
+                <div class="editBox">
+                    <h2>Editar Meu Perfil</h2>
+                    <div class="uploadProfilePictureBox">
+                        <img src='/<%=user.avatar.path%>' alt="avatar">
+                    </div>
+                    <form action="">
+                        <label for="user">Nome Completo</label>
+                        <input type="text" placeholder="digite seu nome">
+                        <label for="user">Bio</label>
+                        <textarea class="bioUpdate" name="bioUpdate" id="bioUpdate" cols="30" rows="10"></textarea>
+                        <br>
+                        <button class="settingsUpdate">Definir Background</button>
+                        <button class="settingsUpdate">Vincular Redes Sociais</button>
+                        <br>
+                        <br>
+                        <button>Atualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('./partials/footer') %>

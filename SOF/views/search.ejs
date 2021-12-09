@@ -1,0 +1,92 @@
+<%- include('./partials/header') %>
+
+
+    <div class="containerSearch">
+        <div class="searchMain">
+
+            <img src="/images/search.png" alt="search logo">
+
+            <div class="searchTool">
+                <form action="" id="searchInputBox">
+                    <input class="textSearch" type="text">
+                </form>
+                <button class="searchBttn">Buscar</button>
+            </div>
+            <div class="searchGuide">
+                <p>Busque por categoria, título, autor ou conteúdo do fio.</p>
+            </div>
+        </div>
+
+        <div class="resultsBar">
+            <p class="results">Resultados:</p>
+            <form>
+                <select id="filter" name="filtro">
+                    <option value="au">Data postagem</option>
+                    <option value="ca">Mais curtidos</option>
+                    <option value="usa">Mais compartilhados</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="resultsItems">
+            <div class="lineResult">
+                <div class="profileData">
+                    <div class="profileImgA"></div>
+                    <div class="threadResult">
+                        <p class="username">@Username</p>
+                        <p class="descriptionRes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolore
+                            inventore distinctio, impedit voluptate.</p>
+                    </div>
+                </div>
+                <div class="resultFunc">
+                    <div class="divBttn">
+                        <button class="copyLink">Copy Link <i class="far fa-clone"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="resultsItems">
+            <div class="lineResult">
+                <div class="profileData">
+                    <div class="profileImgB"></div>
+                    <div class="threadResult">
+                        <p class="username">@Username</p>
+                        <p class="descriptionRes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolore
+                            inventore distinctio, impedit voluptate.</p>
+                    </div>
+                </div>
+                <div class="resultFunc">
+                    <div class="divBttn">
+                        <button class="copyLink">Copy Link <i class="far fa-clone"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="resultsItems">
+            <div class="lineResult">
+                <div class="profileData">
+                    <div class="profileImgC"></div>
+                    <div class="threadResult">
+                        <p class="username">@Username</p>
+                        <p class="descriptionRes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolore
+                            inventore distinctio, impedit voluptate.</p>
+                    </div>
+                </div>
+                <div class="resultFunc">
+                    <div class="divBttn">
+                        <button class="copyLink">Copy Link <i class="far fa-clone"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="pageResults">
+            <i class="fas fa-step-backward"></i>
+            <i class="fas fa-chevron-left"></i>
+            <p>Página 1 de 3</p>
+            <i class="fas fa-chevron-right"></i>
+            <i class="fas fa-step-forward"></i>
+
+        </nav>
+    </div>
+
+<%- include('./partials/footer') %>

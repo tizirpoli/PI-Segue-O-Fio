@@ -1,0 +1,21 @@
+{
+  "id": "1d6f3637bdfe2b",
+  "name": "TIAGO ZIRPOLI",
+  "username": "@tiago",
+  "email": "tizirpoli@gmail.com",
+  "emailConfirmation": "tizirpoli@gmail.com",
+  "phone": "11999999999",
+  "password": "$2b$10$sm728DeqOKNuCFRGrK3uGueYirMCFOJkiiNtW2FNOKN2bEzjzuZUO",
+  "passwordConfirmation": "$2b$10$MY5hmG9Aw3sI/JxYeDyP5.btYbWbYzwwhOS/dnjsfBNe5LfiRzWyu",
+  "bioUpdate": "laplapalpalaplapalpalpal",
+  "avatar": {
+    "fieldname": "avatar",
+    "originalname": "IMG_0958.jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "public/uploads/",
+    "filename": "IMG_0958.jpg",
+    "path": "public/uploads/IMG_0958.jpg",
+    "size": 38919
+  }
+}

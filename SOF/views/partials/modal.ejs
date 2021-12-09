@@ -1,0 +1,32 @@
+<modal class="modal-ind">
+    <form action="" class="indForm">
+        <button class="closeInd">
+            <bolder>X</bolder>
+        </button>
+        <label for="">Nome Pessoa Indicada</label>
+        <input type="text">
+        <label for="">E-mail Indicação</label>
+        <input type="email">
+        <label for="">Seu Nome</label>
+        <input type="text" name="" id="">
+        <label for="">Seu e-mail</label>
+        <input type="email">
+        <textarea placeholder="Digite uma Mensagem"></textarea>
+        <button class="indiqueBttn">Enviar</button>
+    </form>
+</modal>
+
+<script>
+    var modal = document.getElementById("modal-ind");
+    var btn = document.getElementById("senInd");
+    var span = document.getElementsByClassName("closeInd")[0];
+
+    btn.onclick = function () {
+        modal.style.display = "fixed";
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+</script>
