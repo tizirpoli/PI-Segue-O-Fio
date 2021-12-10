@@ -13,10 +13,11 @@
                             <img src="/images/search.png" alt="search logo">
 
                             <div class="searchTool">
-                                <form action="" id="searchInputBox">
-                                    <input class="textSearch" type="text">
+                                <form action="/search" method="post" id="searchInputBox">
+                                    <input class="textSearch" name="searchbox" type="text">
+                                    <button class="searchBttn" type="submit">Buscar</button>
                                 </form>
-                                <button class="searchBttn">Buscar</button>
+
                             </div>
                             <div class="searchGuide">
                                 <p>Busque por categoria, título, autor ou conteúdo do fio.</p>
@@ -24,7 +25,9 @@
                         </div>
 
                         <div class="resultsBar">
-                            <p class="results">Resultados:</p>
+                            <p class="results">Resultados para: <%= search %>
+                            </p>
+                            </p>
                             <form>
                                 <select id="filter" name="filtro">
                                     <option value="au">Data postagem</option>

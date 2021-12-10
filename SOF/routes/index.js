@@ -4,6 +4,7 @@ var router = express.Router();
 const homeController = require('../controllers/homeControler');
 const loginController = require('../controllers/loginController');
 const signupController = require('../controllers/signUpController');
+const searchController = require('../controllers/searchController');
 const { check, body, validationResult } = require('express-validator');
 const multer = require('multer');
 var storage = multer.diskStorage({
@@ -50,8 +51,10 @@ router.get('/ranking', function (req, res) {
 })
 
 router.get('/search', function (req, res) {
-  res.render('search', { title: 'Busca', user: req.session.user })
+  res.render('search', { title: 'Busca', user: req.session.user, search: "" })
 })
+
+router.post('/search', searchController.search);
 
 
 router.get('/login', function (req, res) {
