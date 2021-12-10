@@ -1,21 +1,21 @@
 {
-  "id": "2a5143613a48d0",
-  "name": "luizzz",
-  "username": "luizluiz",
-  "email": "ll@hotmail.com",
-  "emailConfirmation": "ll@hotmail.com",
-  "phone": "1188888",
-  "password": "$2b$10$kyiRkZdn16fnytpsb8iWbuZmDKf9gbRk5nMA7Cq7Z/FBxoc73M63O",
-  "passwordConfirmation": "$2b$10$njmD9upA2G43y.fg6vXr2eqrs1ueAh/wJM.2o0K/YyeKmFVsTCXA2",
-  "bioUpdate": "Luiz LUiz",
+  "id": "2e38698e7cc724",
+  "name": "Teste",
+  "username": "@tester",
+  "email": "email@email.com",
+  "emailConfirmation": "email@email.com",
+  "phone": "11999999999",
+  "password": "$2b$10$t.QAl2ybcTOxxENoiQB9fufiXlnZE5p/qtYmWKAuNB0KQEFZjf6pS",
+  "passwordConfirmation": "$2b$10$.V07y.TZhMIzZWUqz8mOJewticgmM1C19f7VNsePuihFyRBunHZa2",
+  "bioUpdate": "sdasdasdasd",
   "avatar": {
     "fieldname": "avatar",
-    "originalname": "Captura de Tela 2021-12-09 às 00.40.21.png",
+    "originalname": "avatar.jpg",
     "encoding": "7bit",
-    "mimetype": "image/png",
+    "mimetype": "image/jpeg",
     "destination": "public/uploads/",
-    "filename": "Captura de Tela 2021-12-09 às 00.40.21.png",
-    "path": "public/uploads/Captura de Tela 2021-12-09 às 00.40.21.png",
-    "size": 3977
+    "filename": "avatar.jpg",
+    "path": "public/uploads/avatar.jpg",
+    "size": 94128
   }
 }

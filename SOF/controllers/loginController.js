@@ -20,12 +20,13 @@ const userLogin = {
 
 
             if (email != userList.email || (!bcrypt.compareSync(password, userList.password))) {
-                return res.redirect('/login')
+                return res.redirect('login')
             } else if (email === userList.email && bcrypt.compareSync(password, userList.password)) {
                 req.session.user = userList;
-                res.redirect('/dashboard');
+                res.redirect('dashboard');
             }
-        } return res.render('login', { title: "Login", errors: errorsList.errors })
+        }
+        return res.render('login', { title: "Login", errors: errorsList.errors })
 
     },
     logout: (req, res) => {

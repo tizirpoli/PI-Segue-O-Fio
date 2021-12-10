@@ -48,74 +48,176 @@ const signUpController = {
 
             return res.redirect('login');
         } else {
-            return res.render('signUp', { title: "Cadastro", errors: errorsList.errors, fields: userList});
+            return res.render('signUp', { title: "Cadastro", errors: errorsList.errors, fields: userList });
         }
 
 
     },
     updateUsername: (req, res) => {
+        let errorsList = validationResult(req);
         let userList = JSON.parse(fs.readFileSync('users.json', { encoding: 'utf-8' }));
 
-        userList.username = req.body.username;
+        if (errorsList.isEmpty()) {
+            userList.username = req.body.username;
+
+            console.log(userList);
+
+
+
+            let newUser = fs.writeFileSync(userDb, JSON.stringify(userList, null, 2), { encoding: 'utf-8' });
+
+
+            req.session.user = userList;
+
+            return res.redirect('accountmgmt')
+        } else {
+            console.log(errorsList)
+
+            return res.redirect('accountmgmt');
+        }
+
+    },
+    updateEmail: (req, res) => {
+        let errorsList = validationResult(req);
+        let userList = JSON.parse(fs.readFileSync('users.json', { encoding: 'utf-8' }));
+
+        if (errorsList.isEmpty()) {
+            userList.email = req.body.email;
+
+            console.log(userList);
+
+
+
+            let newUser = fs.writeFileSync(userDb, JSON.stringify(userList, null, 2), { encoding: 'utf-8' });
+
+
+            req.session.user = userList;
+
+            return res.redirect('accountmgmt')
+        } else {
+            console.log(errorsList)
+
+            return res.redirect('accountmgmt')
+        }
+
+    },
+    updatePassword: (req, res) => {
+        let errorsList = validationResult(req);
+        let userList = JSON.parse(fs.readFileSync('users.json', { encoding: 'utf-8' }));
+
+        if (errorsList.isEmpty()) {
+            userList.password = bcrypt.hashSync(req.body.password, 10);
+
+            console.log(userList);
+
+
+
+            let newUser = fs.writeFileSync(userDb, JSON.stringify(userList, null, 2), { encoding: 'utf-8' });
+
+
+            req.session.user = userList;
+
+            return res.redirect('accountmgmt')
+        } else {
+            console.log(errorsList)
+
+            return res.redirect('accountmgmt')
+        }
+
+    },
+    updatePhone: (req, res) => {
+        let userList = JSON.parse(fs.readFileSync('users.json', { encoding: 'utf-8' }));
+
+        userList.phone = req.body.phone;
 
         console.log(userList);
 
         let newUser = fs.writeFileSync(userDb, JSON.stringify(userList, null, 2), { encoding: 'utf-8' });
 
-        console.log('NewUser',newUser);
+        console.log('NewUser', newUser);
 
         req.session.user = userList;
 
-        return res.redirect('accountmgmt');
+        return res.redirect('/accountmgmt');
+
 
     },
-    updateEmail: (req, res) => {
+    updateAvatar: (req, res) => {
+        let errorsList = validationResult(req);
         let userList = JSON.parse(fs.readFileSync('users.json', { encoding: 'utf-8' }));
 
-        userList.email = req.body.email;
-        req.session.user.email = req.body.email;
+        if (errorsList.isEmpty()) {
+            userList.avatar = req.file;
 
-        console.log(userList);
+            console.log(userList);
 
-        let updatedUser = fs.writeFileSync(userDb, JSON.stringify(userList, null, 2), { encoding: 'utf-8' });
 
-        console.log(updatedUser);
 
-        return res.redirect('accountmgmt', { user: req.session.user, title: "Edite Seu Perfil" })
+            let newUser = fs.writeFileSync(userDb, JSON.stringify(userList, null, 2), { encoding: 'utf-8' });
+
+
+            req.session.user = userList;
+
+            return res.redirect('accountmgmt')
+        } else {
+            console.log(errorsList)
+
+            return res.redirect('accountmgmt');
+        }
 
     },
-    updatePassword: (req, res) => {
+
+    updatename: (req, res) => {
+        let errorsList = validationResult(req);
         let userList = JSON.parse(fs.readFileSync('users.json', { encoding: 'utf-8' }));
 
-        userList.password = req.body.password;
-        req.session.user.password = req.body.password;
+        if (errorsList.isEmpty()) {
+            userList.name = req.body.name;
 
-        console.log(userList);
+            console.log(userList);
 
-        let updatedUser = fs.writeFileSync(userDb, JSON.stringify(userList, null, 2), { encoding: 'utf-8' });
 
-        console.log(updatedUser);
 
-        return res.redirect('accountmgmt', { user: req.session.user, title: "Edite Seu Perfil" })
+            let newUser = fs.writeFileSync(userDb, JSON.stringify(userList, null, 2), { encoding: 'utf-8' });
+
+
+            req.session.user = userList;
+
+            return res.redirect('accountmgmt')
+        } else {
+            console.log(errorsList)
+
+            return res.redirect('accountmgmt');
+        }
 
     },
-    updatePassword: (req, res) => {
+
+    updatebio: (req, res) => {
+        let errorsList = validationResult(req);
         let userList = JSON.parse(fs.readFileSync('users.json', { encoding: 'utf-8' }));
 
-        userList.password = req.body.password;
-        req.session.user.phone = req.body.phone;
+        if (errorsList.isEmpty()) {
+            userList.bioUpdate = req.body.bioUpdate;
 
-        console.log(userList);
-
-        let updatedUser = fs.writeFileSync(userDb, JSON.stringify(userList, null, 2), { encoding: 'utf-8' });
-
-        console.log(updatedUser);
-
-        return res.redirect('accountmgmt', { user: req.session.user, title: "Edite Seu Perfil" })
-
-    }
+            console.log(userList);
 
 
-};
+
+            let newUser = fs.writeFileSync(userDb, JSON.stringify(userList, null, 2), { encoding: 'utf-8' });
+
+
+            req.session.user = userList;
+
+            return res.redirect('accountmgmt')
+        } else {
+            console.log(errorsList)
+
+            return res.redirect('accountmgmt');
+        }
+
+    },
+
+
+}
 
 module.exports = signUpController;

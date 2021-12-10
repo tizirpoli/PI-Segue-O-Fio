@@ -106,10 +106,44 @@ router.get('/profileview', auth, function (req, res) {
 })
 
 router.get('/accountmgmt', auth, function (req, res) {
-  res.render('accountmgmt', { title: 'Edite Seu Perfil', user: req.session.user })
+  res.render('accountmgmt', { title: 'Edite Seu Perfil', user: req.session.user, errors: validationResult(req) })
 })
 
-router.post('/accountmgmt', auth, signUpController.updateUsername);
+router.post('/updateusername', [
+  check('username')
+    .isLength({ min: 4 })
+    .withMessage("O usuário deve conter no mínimo 4 caracteres")
+], auth, signUpController.updateUsername);
+
+router.post('/updateemail', [
+  body('email').isEmail().withMessage("Digite um email válido"),
+  body('emailConfirmation').custom((value, { req }) => {
+    if (value !== req.body.email) {
+      throw new Error('O Email de confirmação deve ser igual ao email digitado');
+    }
+    return true;
+  }).withMessage("O Email de confirmação deve ser igual ao email digitado"),], auth, signUpController.updateEmail);
+
+router.post('/updatephone', auth, signUpController.updatePhone);
+
+router.post('/updatepassword', [
+  body('password').isLength({ min: 4 }).withMessage("A senha deve conter no mínimo 4 caracteres"),
+  body('passwordConfirmation').custom((value, { req }) => {
+    if (value !== req.body.password) {
+      throw new Error('A senha de confirmação deve ser igual à senha digitada');
+    }
+    return true;
+  }).withMessage("A senha de confirmação deve ser igual à senha digitada")
+], auth, signUpController.updatePassword);
+
+router.post('/updateavatar', upload.single('avatar'), auth, signUpController.updateAvatar);
+
+router.post('/updatename', [
+  check('name')
+    .isLength({ min: 3 })
+    .withMessage("O nome do usuário deve conter no mínimo 3 caracteres")], auth, signUpController.updatename);
+
+router.post('/updatebio', auth, signUpController.updatebio);
 
 router.get('/logout', auth, loginController.logout);
 
