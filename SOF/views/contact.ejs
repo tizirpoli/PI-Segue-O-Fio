@@ -1,33 +1,44 @@
-<%- include('./partials/header') %>
+<% if (user !=undefined) { %>
+    <%- include('./partials/headerlogin') %>
 
-    <div class="containerContact">
-        <form action="" class="getInTouchForm">
-            <h1><%= title %></h1>
-            <label for="" name="name">Nome</label>
-            <input type="text" name="name" id="name" placeholder="Como podemos te chamar?">
-            <label for="" name="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Responderemos neste e-mail">
-            <select name="subject" id="subject">
-                <option value="0" selected disabled>Selecione</option>
-                <option value="1">Dúvida</option>
-                <option value="2">Sugestão</option>
-                <option value="3">Elogio</option>
-                <option value="3">Reclamação</option>
-                <option value="3">Outro</option>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
-                <button type="submit" class="submitContact">Enviar</button>
-            </select>
-        </form>
-        <div class="socialMedia">
-            <h1>Redes</h1>
-            <div class="socialIcons">
-                <a href="http://twitter.com/" target="_blank"><i class="fab fa-twitter-square fa-3x"></i></a>
-            <a href="http://facebook.com/" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
-            <a href="http://instagram.com/" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a>
-            </div>
-            <img src="images/contact.jpg" alt="imagem telefones">
-        </div>
 
-    </div>
+        <%} else{ %>
+            <%- include('./partials/header') %>
+                <% } %>
 
-<%- include('./partials/footer') %>
+                    <div class="containerContact">
+                        <form action="" class="getInTouchForm">
+                            <h1>
+                                <%= title %>
+                            </h1>
+                            <label for="" name="name">Nome</label>
+                            <input type="text" name="name" id="name" placeholder="Como podemos te chamar?">
+                            <label for="" name="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Responderemos neste e-mail">
+                            <select name="subject" id="subject">
+                                <option value="0" selected disabled>Selecione</option>
+                                <option value="1">Dúvida</option>
+                                <option value="2">Sugestão</option>
+                                <option value="3">Elogio</option>
+                                <option value="3">Reclamação</option>
+                                <option value="3">Outro</option>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
+                                <button type="submit" class="submitContact">Enviar</button>
+                            </select>
+                        </form>
+                        <div class="socialMedia">
+                            <h1>Redes</h1>
+                            <div class="socialIcons">
+                                <a href="http://twitter.com/" target="_blank"><i
+                                        class="fab fa-twitter-square fa-3x"></i></a>
+                                <a href="http://facebook.com/" target="_blank"><i
+                                        class="fab fa-facebook-square fa-3x"></i></a>
+                                <a href="http://instagram.com/" target="_blank"><i
+                                        class="fab fa-instagram-square fa-3x"></i></a>
+                            </div>
+                            <img src="images/contact.jpg" alt="imagem telefones">
+                        </div>
+
+                    </div>
+
+                    <%- include('./partials/footer') %>

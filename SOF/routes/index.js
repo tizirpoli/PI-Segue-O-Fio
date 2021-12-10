@@ -21,34 +21,36 @@ const signUpController = require('../controllers/signUpController');
 
 /* GET home page. */
 router.get('/', function (req, res) {
-  res.render('home', { title: 'Home page' });
+  console.log(req.session.user);
+  res.render('home', { title: 'Home page', user: req.session.user });
 });
 
 router.get('/', function (req, res) {
-  res.render('home', { title: 'Home page' });
+  console.log(req.session.user);
+  res.render('home', { title: 'Home page', user: req.session.user });
 });
 
 router.post('/home', homeController.post);
 router.post('/', homeController.post);
 
 router.get('/about', function (req, res) {
-  res.render('about', { title: 'Sobre Nós' })
+  res.render('about', { title: 'Sobre Nós', user: req.session.user })
 })
 
 router.get('/contact', function (req, res) {
-  res.render('contact', { title: 'Contato' })
+  res.render('contact', { title: 'Contato', user: req.session.user })
 })
 
 router.get('/credits', function (req, res) {
-  res.render('credits', { title: 'Créditos' })
+  res.render('credits', { title: 'Créditos', user: req.session.user })
 })
 
 router.get('/ranking', function (req, res) {
-  res.render('ranking', { title: 'Ranking' })
+  res.render('ranking', { title: 'Ranking', user: req.session.user })
 })
 
 router.get('/search', function (req, res) {
-  res.render('search', { title: 'Busca' })
+  res.render('search', { title: 'Busca', user: req.session.user })
 })
 
 

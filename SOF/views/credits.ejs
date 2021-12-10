@@ -1,44 +1,52 @@
-<%- include('./partials/header') %>
+<% if (user !=undefined) { %>
+    <%- include('./partials/headerlogin') %>
 
 
-    <div class="containerCredits">
-        <div class="images"><img src="/images/credits1.jpg" alt="imagem empresarial 1"></div>
-        <div class="creditsContainer">
-            <h1><%= title %></h1>
-            <div class="creditsItem">
-                <div class="creditsTitle">
-                    Fontes
-                </div>
-                <div class="creditsContent">
-                    <li><a href="#">Fonte Logo</a></li>
-                    <li><a href="#">Fonte Imagens</a></li>
-                </div>
-            </div>
-            <div class="creditsItem">
-                <div class="creditsTitle">
-                    Imagens
-                </div>
-                <div class="creditsContent">
-                    <li><a href="#">Fotografo A</a></li>
-                    <li><a href="#">Fotografo B</a></li>
-                    <li><a href="#">Fotografo C</a></li>
+        <%} else{ %>
+            <%- include('./partials/header') %>
+                <% } %>
 
-                </div>
-            </div>
-            <div class="creditsItem">
-                <div class="creditsTitle">
-                    Item
-                </div>
-                <div class="creditsContent">
-                    <li><a href="#">Item A</a></li>
-                    <li><a href="#">Item B</a></li>
-                    <li><a href="#">Item C</a></li>
-                    <li><a href="#">Item D</a></li>
-                    <li><a href="#">Item E</a></li>
-                </div>
-            </div>
-        </div>
-        <div class="images"><img src="/images/credits2.jpg" alt="imagem empresarial 2"></div>
-    </div>
 
-<%- include('./partials/footer') %>
+                    <div class="containerCredits">
+                        <div class="images"><img src="/images/credits1.jpg" alt="imagem empresarial 1"></div>
+                        <div class="creditsContainer">
+                            <h1>
+                                <%= title %>
+                            </h1>
+                            <div class="creditsItem">
+                                <div class="creditsTitle">
+                                    Fontes
+                                </div>
+                                <div class="creditsContent">
+                                    <li><a href="#">Fonte Logo</a></li>
+                                    <li><a href="#">Fonte Imagens</a></li>
+                                </div>
+                            </div>
+                            <div class="creditsItem">
+                                <div class="creditsTitle">
+                                    Imagens
+                                </div>
+                                <div class="creditsContent">
+                                    <li><a href="#">Fotografo A</a></li>
+                                    <li><a href="#">Fotografo B</a></li>
+                                    <li><a href="#">Fotografo C</a></li>
+
+                                </div>
+                            </div>
+                            <div class="creditsItem">
+                                <div class="creditsTitle">
+                                    Item
+                                </div>
+                                <div class="creditsContent">
+                                    <li><a href="#">Item A</a></li>
+                                    <li><a href="#">Item B</a></li>
+                                    <li><a href="#">Item C</a></li>
+                                    <li><a href="#">Item D</a></li>
+                                    <li><a href="#">Item E</a></li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="images"><img src="/images/credits2.jpg" alt="imagem empresarial 2"></div>
+                    </div>
+
+                    <%- include('./partials/footer') %>
