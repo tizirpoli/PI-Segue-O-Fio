@@ -46,9 +46,9 @@ const signUpController = {
             console.log(newUser);
 
 
-            return res.redirect(200, '/login');
+            return res.redirect('login');
         } else {
-            return res.render('signUp', { title: "Cadastro", errors: errorsList.errors })
+            return res.render('signUp', { title: "Cadastro", errors: errorsList.errors, fields: userList});
         }
 
 
@@ -62,9 +62,11 @@ const signUpController = {
 
         let newUser = fs.writeFileSync(userDb, JSON.stringify(userList, null, 2), { encoding: 'utf-8' });
 
-        req.session.user = newUser;
+        console.log('NewUser',newUser);
 
-        return res.redirect('accountmgmt', { user: req.session.user, title: "Edite Seu Perfil" })
+        req.session.user = userList;
+
+        return res.redirect('accountmgmt');
 
     },
     updateEmail: (req, res) => {

@@ -19,9 +19,9 @@ const userLogin = {
             console.log(userList.password);
 
 
-            if (email != userList.email && (!bcrypt.compareSync(password, userList.password))) {
+            if (email != userList.email || (!bcrypt.compareSync(password, userList.password))) {
                 return res.redirect('/login')
-            } else {
+            } else if (email === userList.email && bcrypt.compareSync(password, userList.password)) {
                 req.session.user = userList;
                 res.redirect('/dashboard');
             }
