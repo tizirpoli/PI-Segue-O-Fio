@@ -20,7 +20,12 @@ const userLogin = {
 
 
             if (email != userList.email || (!bcrypt.compareSync(password, userList.password))) {
-                return res.redirect('login')
+                let errors = [
+                    {
+                        msg: "Email e/ou senha inválidos",
+                    },
+                ]
+                return res.render('login', { title: 'Login', errors: errors })
             } else if (email === userList.email && bcrypt.compareSync(password, userList.password)) {
                 req.session.user = userList;
                 res.redirect('dashboard');

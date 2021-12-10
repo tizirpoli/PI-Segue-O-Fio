@@ -40,6 +40,7 @@ const signUpController = {
         }
 
         if (errorsList.isEmpty()) {
+            newUser.username = "@" + req.body.username;
             fs.writeFileSync(userDb, JSON.stringify(newUser, null, 2), { encoding: 'utf-8' });
 
             console.log(newUser);
@@ -47,6 +48,7 @@ const signUpController = {
 
             return res.redirect('login');
         } else {
+
             return res.render('signUp', { title: "Cadastro", errors: errorsList.errors, fields: newUser });
         }
 
@@ -57,7 +59,7 @@ const signUpController = {
         let userList = JSON.parse(fs.readFileSync('users.json', { encoding: 'utf-8' }));
 
         if (errorsList.isEmpty()) {
-            userList.username = req.body.username;
+            userList.username = "@" + req.body.username;
 
             console.log(userList);
 
@@ -72,7 +74,7 @@ const signUpController = {
         } else {
             console.log(errorsList)
 
-            return res.redirect('accountmgmt');
+            return res.render('accountmgmt', { title: 'Edite Seu Perfil', user: req.session.user, errors: validationResult(req) });
         }
 
     },
@@ -96,7 +98,7 @@ const signUpController = {
         } else {
             console.log(errorsList)
 
-            return res.redirect('accountmgmt')
+            return res.render('accountmgmt', { title: 'Edite Seu Perfil', user: req.session.user, errors: validationResult(req) });
         }
 
     },
@@ -120,7 +122,7 @@ const signUpController = {
         } else {
             console.log(errorsList)
 
-            return res.redirect('accountmgmt')
+            return res.render('accountmgmt', { title: 'Edite Seu Perfil', user: req.session.user, errors: validationResult(req) });
         }
 
     },
@@ -186,7 +188,7 @@ const signUpController = {
         } else {
             console.log(errorsList)
 
-            return res.redirect('accountmgmt');
+            return res.render('accountmgmt', { title: 'Edite Seu Perfil', user: req.session.user, errors: validationResult(req) });
         }
 
     },

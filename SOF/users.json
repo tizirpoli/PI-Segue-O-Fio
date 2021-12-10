@@ -1,21 +1,21 @@
 {
-  "id": "2e38698e7cc724",
-  "name": "Teste",
-  "username": "@tester",
-  "email": "email@email.com",
-  "emailConfirmation": "email@email.com",
+  "id": "10bb1ad4347fd5",
+  "name": "TIAGO ZIRPOLI",
+  "username": "@tiagoo",
+  "email": "tizirpoli@gmail.com",
+  "emailConfirmation": "tizirpoli@gmail.com",
   "phone": "11999999999",
-  "password": "$2b$10$t.QAl2ybcTOxxENoiQB9fufiXlnZE5p/qtYmWKAuNB0KQEFZjf6pS",
-  "passwordConfirmation": "$2b$10$.V07y.TZhMIzZWUqz8mOJewticgmM1C19f7VNsePuihFyRBunHZa2",
-  "bioUpdate": "sdasdasdasd",
+  "password": "$2b$10$5bdI8hhoL/SwT6RdEGa.gufTPGf6zfpoBqGF2xRDvsGqJzM6ZnWo2",
+  "passwordConfirmation": "$2b$10$RnAJ/fOr6xlh0bTemKf1kumCT8tmaXLQfZdiQLn586ubAmlMsDHIe",
+  "bioUpdate": "asdasdasdasd",
   "avatar": {
     "fieldname": "avatar",
-    "originalname": "avatar.jpg",
+    "originalname": "IMG_0958.jpg",
     "encoding": "7bit",
     "mimetype": "image/jpeg",
     "destination": "public/uploads/",
-    "filename": "avatar.jpg",
-    "path": "public/uploads/avatar.jpg",
-    "size": 94128
+    "filename": "IMG_0958.jpg",
+    "path": "public/uploads/IMG_0958.jpg",
+    "size": 38919
   }
 }

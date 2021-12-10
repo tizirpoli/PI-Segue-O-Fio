@@ -77,7 +77,9 @@ router.post('/signUp', upload.single('avatar'), [
     .withMessage("O nome do usuário deve conter no mínimo 3 caracteres"),
   check('username')
     .isLength({ min: 4 })
-    .withMessage("O usuário deve conter no mínimo 4 caracteres"),
+    .withMessage("O usuário deve conter no mínimo 4 caracteres")
+    .matches(/^[A-Za-z0-9]+$/)
+    .withMessage("O nome do usuário não deve conter caracteres especiais"),
   body('password').isLength({ min: 4 }).withMessage("A senha deve conter no mínimo 4 caracteres"),
   body('passwordConfirmation').custom((value, { req }) => {
     if (value !== req.body.password) {
@@ -118,6 +120,8 @@ router.post('/updateusername', [
   check('username')
     .isLength({ min: 4 })
     .withMessage("O usuário deve conter no mínimo 4 caracteres")
+    .matches(/^[A-Za-z0-9]+$/)
+    .withMessage("O nome do usuário não deve conter caracteres especiais"),
 ], auth, signUpController.updateUsername);
 
 router.post('/updateemail', [
