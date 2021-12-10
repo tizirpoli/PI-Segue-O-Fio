@@ -24,23 +24,22 @@ const signUpController = {
         let errorsList = validationResult(req);
         console.log(errorsList);
 
+        let myuuid = myuid();
+        let hash = bcrypt.hashSync(req.body.password, 10);
+        let newUser = {
+            id: myuuid,
+            name: req.body.fullName,
+            username: req.body.username,
+            email: req.body.email,
+            emailConfirmation: req.body.emailConfirmation,
+            phone: req.body.phone,
+            password: hash,
+            passwordConfirmation: bcrypt.hashSync(req.body.passwordConfirmation, 10),
+            bioUpdate: req.body.bioUpdate,
+            avatar: req.file,
+        }
+
         if (errorsList.isEmpty()) {
-            let myuuid = myuid();
-            let hash = bcrypt.hashSync(req.body.password, 10);
-            let newUser = {
-                id: myuuid,
-                name: req.body.fullName,
-                username: req.body.username,
-                email: req.body.email,
-                emailConfirmation: req.body.emailConfirmation,
-                phone: req.body.phone,
-                password: hash,
-                passwordConfirmation: bcrypt.hashSync(req.body.passwordConfirmation, 10),
-                bioUpdate: req.body.bioUpdate,
-                avatar: req.file,
-            }
-
-
             fs.writeFileSync(userDb, JSON.stringify(newUser, null, 2), { encoding: 'utf-8' });
 
             console.log(newUser);
@@ -48,7 +47,7 @@ const signUpController = {
 
             return res.redirect('login');
         } else {
-            return res.render('signUp', { title: "Cadastro", errors: errorsList.errors, fields: userList });
+            return res.render('signUp', { title: "Cadastro", errors: errorsList.errors, fields: newUser });
         }
 
 
