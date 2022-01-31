@@ -17,7 +17,7 @@ module.exports = {
         },
         user_name: {
           type: Sequelize.STRING,
-          allowNull: true
+          allowNull: false
         },
         phone: {
           type : Sequelize.STRING(20),
@@ -27,25 +27,28 @@ module.exports = {
         },
         email: {
           type : Sequelize.STRING(50),
-          allowNull: true
+          allowNull: false
         },
         password: {
           type: Sequelize.STRING,
-          allowNull: true
+          allowNull: false
         },
         is_admin : {
-          type: Sequelize.STRING(1),
-          allowNull: true
+          type: Sequelize.BOOLEAN,
+          allowNull: false,
+          defaultValue: false
         },
         created_date: {
-          type: Sequelize.DATE
+          type: Sequelize.DATE,
+          defaultValue: Sequelize.fn('NOW')
         },
         modification_date: {
           type: Sequelize.DATE(6)
         },
         isDeleted: {
-          type: Sequelize.STRING(1),
-          allowNull: true
+          type: Sequelize.BOOLEAN,
+          allowNull: false,
+          defaultValue: false
         },
         user_last_modification: {
           type: Sequelize.STRING
