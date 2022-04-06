@@ -2,7 +2,6 @@
 
 
     <div class="containerAccMgmt">
-        <button class="mainMenu"><i class="fas fa-bars fa-2x"></i></button>
         <div class="mainBox">
             <h2>Painel de Controle</h2>
             <div class="editDashboard">
@@ -31,9 +30,9 @@
                         <%= user.phone %>
                     </p>
                     <br>
-                    <h4>Bio</h4>
-                    <textarea name="bio" id="bio" cols="30" rows="5" disabled
-                        placeholder=" <%= user.bioUpdate %>"></textarea>
+                   <h4>Bio</h4>
+                    <small name="bio" id="bio" cols="30" rows="5" disabled
+                      ><%= user.bioUpdate %></small>
                 </div>
                 <div class="editBox">
                     <h2>Editar Minha Conta</h2>
@@ -94,7 +93,7 @@
                     </form>
                     <form action="/updatebio" method="post">
                         <label for="bioUpdate">Bio</label>
-                        <textarea class="bioUpdate" name="bioUpdate" id="bioUpdate" cols="30" rows="10"></textarea>
+                        <textarea class="bioUpdate" name="bioUpdate" id="bioUpdate" cols="30" rows="10"><%= user.bioUpdate %></textarea>
                         <button type="submit">Atualizar</button>
                         <br>
                     </form>

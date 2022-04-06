@@ -35,7 +35,7 @@ const signUpController = {
             phone: req.body.phone,
             password: hash,
             passwordConfirmation: bcrypt.hashSync(req.body.passwordConfirmation, 10),
-            bioUpdate: req.body.bioUpdate,
+            //bioUpdate: req.body.bioUpdate,
             avatar: req.file,
         }
 
